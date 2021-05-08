@@ -1,0 +1,127 @@
+// 11. Button
+// ----------
+
+$button-padding: rem-calc(12) rem-calc(24);
+$button-padding-desktop: rem-calc(8) rem-calc(32);
+$button-margin: 0 0 $global-margin 0;
+$button-fill: solid;
+$button-background: $primary-color;
+$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-color: $white;
+$button-color-alt: $black;
+$button-radius: rem-calc(28);
+$button-sizes: (
+  tiny: 0.6rem,
+  small: rem-calc(18),
+  smallHeight: rem-calc(22),
+  default: rem-calc(21),
+  defaultHeight: rem-calc(30),
+  large: 1.25rem,
+);
+$button-opacity-disabled: 0.25;
+$button-background-hover-lightness: -20%;
+$button-hollow-hover-lightness: -50%;
+
+// buttons latam attributes
+$button-latam-bg-primary: map-get(map-get($foundation-latam, 'primary'), 'third');
+$button-latam-color-primary: map-get(map-get($foundation-latam, 'secondary'), 'fourth');
+
+$button-latam-bg-secondary: map-get(map-get($foundation-latam, 'primary'), 'first');
+$button-latam-bg-hover-secondary: map-get(map-get($foundation-latam, 'secondary'), 'first');
+$button-latam-color-secondary: map-get(map-get($foundation-latam, 'secondary'), 'fourth');
+
+$button-latam-bg-primary-outline: map-get(map-get($foundation-latam, 'secondary'), 'fourth');
+$button-latam-color-primary-outline: map-get(map-get($foundation-latam, 'primary'), 'third');
+$button-latam-border-primary-outline: map-get(map-get($foundation-latam, 'primary'), 'third');
+$button-latam-bg-hover-primary-outline: map-get(map-get($foundation-latam, 'primary'), 'third');
+$button-latam-color-hover-primary-outline: map-get(map-get($foundation-latam, 'secondary'), 'fourth');
+
+$button-latam-bg-disabled: map-get(map-get($foundation-latam, 'secondary'), 'second');
+$button-latam-color-disabled: map-get(map-get($foundation-latam, 'secondary'), 'fourth');
+$button-latam-boder-color-disabled: map-get(map-get($foundation-latam, 'secondary'), 'fourth');
+
+$button-latam-border-radius: rem-calc(28);
+
+$buttons-latam:(
+  primary: (
+    default: (
+      background-color: $button-latam-bg-primary,
+      color: $button-latam-color-primary
+    ),
+    hover: (
+      background-color: $button-latam-bg-primary,
+      color: $button-latam-color-primary,
+      opacity: .8
+    ),
+    disabled: (
+      background-color: $button-latam-bg-disabled,
+      color: $button-latam-color-disabled,
+      border-color: $button-latam-boder-color-disabled
+    ),
+    focus: (
+      background-color: $button-latam-bg-primary,
+      color: $button-latam-color-primary,
+      opacity: .8
+    )
+  ),
+  secondary: (
+    default: (
+      background-color: $button-latam-bg-secondary,
+      color: $button-latam-color-secondary
+    ),
+    hover: (
+      background-color: $button-latam-bg-hover-secondary,
+      color: $button-latam-color-primary
+    ),
+    disabled: (
+      background-color: $button-latam-bg-disabled,
+      color: $button-latam-color-disabled,
+      border-color: $button-latam-boder-color-disabled
+    ),
+    focus: (
+      background-color: $button-latam-bg-hover-secondary,
+      color: $button-latam-color-primary
+    )
+  ),
+  primary-outline: (
+    default: (
+      border-color: $button-latam-border-primary-outline,
+      background-color: $button-latam-bg-primary-outline,
+      color: $button-latam-color-primary-outline
+    ),
+    hover: (
+      background-color: $button-latam-bg-hover-primary-outline,
+      color: $button-latam-color-hover-primary-outline,
+    ),
+    disabled: (
+      background-color: $button-latam-bg-disabled,
+      color: $button-latam-color-disabled,
+      border-color: $button-latam-boder-color-disabled
+    ),
+    focus: (
+      background-color: $button-latam-bg-hover-primary-outline,
+      color: $button-latam-color-hover-primary-outline,
+    )
+  ),
+);
+
+// 12. Button Group
+// ----------------
+
+$buttongroup-margin: 1rem;
+$buttongroup-spacing: 1px;
+$buttongroup-child-selector: '.button';
+$buttongroup-expand-max: 6;
+
+// 13. Callout
+// -----------
+
+$callout-background: $white;
+$callout-background-fade: 85%;
+$callout-border: 1px solid rgba($black, 0.25);
+$callout-margin: 0 0 1rem 0;
+$callout-padding: 1rem;
+$callout-font-color: $body-font-color;
+$callout-font-color-alt: $body-background;
+$callout-radius: $global-radius;
+$callout-link-tint: 30%;

@@ -1,0 +1,122 @@
+@import 'util/include';
+
+// 0. Fonts
+// --------
+
+$Arial: Arial, Helvetica, sans-serif;
+$AvalonBold: 'AvalonBold', Arial, sans-serif;
+$AvalonBoldCond: 'AvalonBoldCond', Arial, sans-serif;
+$AvalonBoldObl: 'AvalonBoldObl', Arial, sans-serif;
+$AvalonBook: 'AvalonBook', Arial, sans-serif;
+$AvalonBookCond: 'AvalonBookCond', Arial, sans-serif;
+$AvalonDemi: 'AvalonDemi', Arial, sans-serif;
+$AvalonMedium: 'AvalonMedium', Arial, sans-serif;
+$AvalonMediumObl: 'AvalonMediumObl', Arial, sans-serif;
+$AvalonXLight: 'AvalonXLight', Arial, sans-serif;
+$AvalonXLightObl: 'AvalonXLightObl', Arial, sans-serif;
+$Georgia: Georgia, "Times New Roman", Times, serif;
+$Helvetica: 'Helvetica neue', Helvetica, Arial;
+
+@mixin Poppins($font-weight) {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-weight: $font-weight;
+}
+
+  // 1. Global
+// ---------
+$global-font-size: 100%;
+$global-width: rem-calc(1280);
+$global-lineheight: 1.5;
+$global-header-width: rem-calc(1280);
+
+$foundation-palette: (
+    primary: (
+      first: #BEAE59, //map-get(map-get($foundation-latam, 'primary'), 'first')
+      second: #FFFFFF, //map-get(map-get($foundation-latam, 'primary'), 'second')
+      third: #444444, //map-get(map-get($foundation-latam, 'primary'), 'third')
+      fourth: #E12F2F, //map-get(map-get($foundation-latam, 'primary'), 'fourth')
+    ),
+    secondary: (
+      first: #AC0000, //map-get(map-get($foundation-latam, 'secondary'), 'first')
+      second: #49CCF3, //map-get(map-get($foundation-latam, 'secondary'), 'second')
+      third: #13B5E6, //map-get(map-get($foundation-latam, 'secondary'), 'third')
+      fourth:#EEEEEE,
+      fifth: #DDDDDD,
+    )
+);
+
+$social-links: (
+  facebook: (
+    hover: #3b5998
+  ),
+  twitter: (
+    hover: #4099ff
+  ),
+  instagram: (
+    hover: #9b6954
+  ),
+  youtube: (
+    hover: #c4302b
+  ),
+  pinterest: (
+    hover: #C92228
+  )
+);
+
+// 2. Breakpoints
+// --------------
+
+$breakpoints: (
+  small: 0,
+  medium: 768px,
+  large: 1047px,
+  mlarge: 1024px,
+  xlarge: 1150px
+);
+$breakpoint-classes: (small medium large);
+
+// 3. The Grid
+// -----------
+
+$grid-row-width: $global-width;
+$grid-column-min-width: (
+    small: 74px,
+    medium: 95px,
+);
+$grid-column-count: 12;
+$grid-column-gutter: (
+  small: 10px,
+  medium: 8px,
+);
+$grid-row-padding:(
+  small: 0 19px,
+  medium: 0 24px 0 20px,
+);
+$grid-column-align-edge: true;
+$block-grid-max: 8;
+
+// 4. Base Typography
+// ------------------
+
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-normal;
+$header-font-style: normal;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+$header-sizes: (
+  small: (
+    'h1': 20,
+    'h2': 14,
+    'h3': 14,
+    'h4': 14,
+    'h5': 14,
+    'h6': 14,
+  ),
+  medium: (
+    'h1': 24,
+    'h2': 16,
+    'h3': 16,
+    'h4': 16,
+    'h5': 16,
+    'h6': 16,
+  ),
+);
