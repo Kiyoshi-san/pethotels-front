@@ -16,13 +16,10 @@ export const listProducts = ({
   max = 0,
   rating = 0,
 }) => async (dispatch) => {
-  console.log("aaa");
   dispatch({
     type: PRODUCT_LIST_REQUEST,
   });
-  console.log("bbb");
   try {
-    console.log("ccc");
     const { data } = await Axios.get(
       `/api/products?pageNumber=${pageNumber}&seller=${seller}&name=${name}&category=${category}&min=${min}&max=${max}&rating=${rating}&order=${order}`
     );

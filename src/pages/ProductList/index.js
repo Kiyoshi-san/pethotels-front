@@ -9,7 +9,7 @@ export default function ProductList() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(listProducts({}));
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>

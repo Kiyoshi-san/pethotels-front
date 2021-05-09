@@ -3,5 +3,5 @@ import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../../redux/actions/product";
 
 export default function HomePage() {
-  return <div></div>;
+  return <div>home page</div>;
 }

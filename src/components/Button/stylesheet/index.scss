@@ -3,12 +3,10 @@
 
 $button-padding: rem-calc(12) rem-calc(24);
 $button-padding-desktop: rem-calc(8) rem-calc(32);
-$button-margin: 0 0 $global-margin 0;
+$button-margin: 0 0 0 0;
 $button-fill: solid;
-$button-background: $primary-color;
-$button-background-hover: scale-color($button-background, $lightness: -15%);
-$button-color: $white;
-$button-color-alt: $black;
+$button-color: #FFFFFF;
+$button-color-alt: #000000;
 $button-radius: rem-calc(28);
 $button-sizes: (
   tiny: 0.6rem,
@@ -19,26 +17,25 @@ $button-sizes: (
   large: 1.25rem,
 );
 $button-opacity-disabled: 0.25;
-$button-background-hover-lightness: -20%;
 $button-hollow-hover-lightness: -50%;
 
 // buttons latam attributes
-$button-latam-bg-primary: map-get(map-get($foundation-latam, 'primary'), 'third');
-$button-latam-color-primary: map-get(map-get($foundation-latam, 'secondary'), 'fourth');
+$button-latam-bg-primary: map-get(map-get($foundation-palette, 'primary'), 'third');
+$button-latam-color-primary: map-get(map-get($foundation-palette, 'secondary'), 'fourth');
 
-$button-latam-bg-secondary: map-get(map-get($foundation-latam, 'primary'), 'first');
-$button-latam-bg-hover-secondary: map-get(map-get($foundation-latam, 'secondary'), 'first');
-$button-latam-color-secondary: map-get(map-get($foundation-latam, 'secondary'), 'fourth');
+$button-latam-bg-secondary: map-get(map-get($foundation-palette, 'primary'), 'first');
+$button-latam-bg-hover-secondary: map-get(map-get($foundation-palette, 'secondary'), 'first');
+$button-latam-color-secondary: map-get(map-get($foundation-palette, 'secondary'), 'fourth');
 
-$button-latam-bg-primary-outline: map-get(map-get($foundation-latam, 'secondary'), 'fourth');
-$button-latam-color-primary-outline: map-get(map-get($foundation-latam, 'primary'), 'third');
-$button-latam-border-primary-outline: map-get(map-get($foundation-latam, 'primary'), 'third');
-$button-latam-bg-hover-primary-outline: map-get(map-get($foundation-latam, 'primary'), 'third');
-$button-latam-color-hover-primary-outline: map-get(map-get($foundation-latam, 'secondary'), 'fourth');
+$button-latam-bg-primary-outline: map-get(map-get($foundation-palette, 'secondary'), 'fourth');
+$button-latam-color-primary-outline: map-get(map-get($foundation-palette, 'primary'), 'third');
+$button-latam-border-primary-outline: map-get(map-get($foundation-palette, 'primary'), 'third');
+$button-latam-bg-hover-primary-outline: map-get(map-get($foundation-palette, 'primary'), 'third');
+$button-latam-color-hover-primary-outline: map-get(map-get($foundation-palette, 'secondary'), 'fourth');
 
-$button-latam-bg-disabled: map-get(map-get($foundation-latam, 'secondary'), 'second');
-$button-latam-color-disabled: map-get(map-get($foundation-latam, 'secondary'), 'fourth');
-$button-latam-boder-color-disabled: map-get(map-get($foundation-latam, 'secondary'), 'fourth');
+$button-latam-bg-disabled: map-get(map-get($foundation-palette, 'secondary'), 'second');
+$button-latam-color-disabled: map-get(map-get($foundation-palette, 'secondary'), 'fourth');
+$button-latam-boder-color-disabled: map-get(map-get($foundation-palette, 'secondary'), 'fourth');
 
 $button-latam-border-radius: rem-calc(28);
 
@@ -116,12 +113,9 @@ $buttongroup-expand-max: 6;
 // 13. Callout
 // -----------
 
-$callout-background: $white;
+$callout-background: #FFFFFF;
 $callout-background-fade: 85%;
-$callout-border: 1px solid rgba($black, 0.25);
+$callout-border: 1px solid rgba(#000000, 0.25);
 $callout-margin: 0 0 1rem 0;
 $callout-padding: 1rem;
-$callout-font-color: $body-font-color;
-$callout-font-color-alt: $body-background;
-$callout-radius: $global-radius;
 $callout-link-tint: 30%;
