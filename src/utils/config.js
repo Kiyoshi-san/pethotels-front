@@ -6,5 +6,5 @@ export const headers = () => async (dispatch, getState) => {
 };
 
 export const errorMessage = (err) => {
-  return err.response.data.message ? err.response.data.message : err.message;
+  return err.response?.data.message ? err.response.data.message : err.message;
 };

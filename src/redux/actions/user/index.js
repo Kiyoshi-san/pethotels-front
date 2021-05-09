@@ -4,9 +4,9 @@ import {
   USER_LIST_REQUEST,
   USER_LIST_SUCCESS,
   USER_LIST_FAIL,
-} from "../cart/constants";
+} from "../user/constants";
 
-export const listUsers = async (dispatch, getState) => {
+export const listUsers = () => async (dispatch, getState) => {
   dispatch({ type: USER_LIST_REQUEST });
   try {
     const {

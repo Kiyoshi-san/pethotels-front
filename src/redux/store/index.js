@@ -9,7 +9,7 @@ const initialState = {};
 const reducer = combineReducers({
   userList: userListReducer,
   productList: productListReducer,
-  orderList: orderListReducer,
+  // orderList: orderListReducer,
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose;
