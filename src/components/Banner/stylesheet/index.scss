@@ -1,11 +1,21 @@
+$bannerHeight: 700px;
+
 .pt_homepage {
     .carousel-root {
         .slider-wrapper {
-            max-height: 600px;
+            max-height: $bannerHeight;
             .slide div {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+            .imageMask {
+                position: absolute;
+                width: 100%;
+                border: solid;
+                height: $bannerHeight;
+                background-color: rgba(0,0,0, 0.4);
+                top: 0;
             }
             img {
                 margin-top: -20%;
@@ -14,6 +24,7 @@
                 position: absolute;
                 color: map-get(map-get($foundation-palette, primary), second);
                 font-size: rem-calc(80);
+                top: 15%;
             }
             .title-animated {
                 animation: animate-title 1s linear forwards;
@@ -22,7 +33,6 @@
         }
         .control-arrow {
             border-radius: 50%;
-            background-color: rgba(0,0,0, 0.8) !important;
             height: 50px;
             width: 50px;
             margin-top: 20% !important;

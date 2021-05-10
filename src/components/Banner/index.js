@@ -23,18 +23,22 @@ export default function Banner() {
       stopOnHover
     >
       <div>
+        <div className="imageMask"></div>
         <img src={img1} />
         <p className={`title ${animatedClass}`}>Legend 1</p>
       </div>
       <div>
+        <div className="imageMask"></div>
         <img src={img2} />
         <p className={`title ${animatedClass}`}>Legend 2</p>
       </div>
       <div>
+        <div className="imageMask"></div>
         <img src={img3} />
         <p className={`title ${animatedClass}`}>Legend 3</p>
       </div>
       <div>
+        <div className="imageMask"></div>
         <img src={img4} />
         <p className={`title ${animatedClass}`}>Legend 4</p>
       </div>

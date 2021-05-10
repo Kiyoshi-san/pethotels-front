@@ -2,20 +2,21 @@
     display: flex;
     background: rgba(0,0,0,0.7);
     color: map-get(map-get($foundation-palette, primary), second);
+    padding: rem-calc(10 50);
     .icon-logo {
         display: flex;
         align-items: center;
         flex: 0 0 18%;
         cursor: pointer;
         &:before {
-            font-size: rem-calc(100);
+            font-size: rem-calc(80);
         }
     }
     .cta-icons {
         display: flex;
         flex: 0 0 33%;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         .icon {
             cursor: pointer;
             &:before {
@@ -37,5 +38,4 @@
             cursor: pointer;
         }
     }
-    padding: 20px;
 }
