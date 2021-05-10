@@ -25,22 +25,22 @@ export default function Banner() {
       <div>
         <div className="imageMask"></div>
         <img src={img1} />
-        <p className={`title ${animatedClass}`}>Legend 1</p>
+        <h1 className={`title ${animatedClass}`}>Legend 1</h1>
       </div>
       <div>
         <div className="imageMask"></div>
         <img src={img2} />
-        <p className={`title ${animatedClass}`}>Legend 2</p>
+        <h1 className={`title ${animatedClass}`}>Legend 2</h1>
       </div>
       <div>
         <div className="imageMask"></div>
         <img src={img3} />
-        <p className={`title ${animatedClass}`}>Legend 3</p>
+        <h1 className={`title ${animatedClass}`}>Legend 3</h1>
       </div>
       <div>
         <div className="imageMask"></div>
         <img src={img4} />
-        <p className={`title ${animatedClass}`}>Legend 4</p>
+        <h1 className={`title ${animatedClass}`}>Legend 4</h1>
       </div>
     </Carousel>
   );
