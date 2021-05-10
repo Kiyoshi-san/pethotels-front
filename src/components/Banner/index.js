@@ -21,7 +21,6 @@ export default function Banner() {
       emulateTouch
       infiniteLoop
       stopOnHover
-      showThumbs={false}
     >
       <div>
         <div className="imageMask"></div>

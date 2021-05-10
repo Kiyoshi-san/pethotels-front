@@ -25,10 +25,10 @@ $bannerHeight: 700px;
                 color: map-get(map-get($foundation-palette, primary), second);
                 font-size: rem-calc(80);
                 top: 15%;
+                left: 0;
             }
             .title-animated {
                 animation: animate-title 1s linear forwards;
-                left: 0;
             }
         }
         .control-arrow {
@@ -38,6 +38,10 @@ $bannerHeight: 700px;
             margin-top: 20% !important;
             background-color: map-get(map-get($foundation-palette, primary), sixth) !important;
             margin: 0 20px;
+        }
+        // Hiding the thumbnail, by configuration it removes the title animation
+        .thumbs-wrapper {
+            display: none;
         }
     }
 }
