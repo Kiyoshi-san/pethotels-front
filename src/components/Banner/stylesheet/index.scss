@@ -1,48 +1,67 @@
 $bannerHeight: 700px;
 
-.pt_homepage {
-    .carousel-root {
-        .slider-wrapper {
+.carousel-banner-container {
+    .react-multi-carousel-track  {
+        .carousel-item-height {
             max-height: $bannerHeight;
-            .slide div {
+            div {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-            }
-            .imageMask {
-                position: absolute;
-                width: 100%;
-                border: solid;
-                height: $bannerHeight;
-                background-color: rgba(0,0,0, 0.4);
-                top: 0;
-            }
-            img {
-                margin-top: -20%;
-            }
-            .title {
-                position: absolute;
-                color: map-get(map-get($foundation-palette, primary), second);
-                font-size: rem-calc(80);
-                top: 15%;
-                left: 0;
-            }
-            .title-animated {
-                animation: animate-title 1s linear forwards;
+                .imageMask {
+                    position: absolute;
+                    width: 100%;
+                    height: $bannerHeight;
+                    background-color: rgba(0,0,0, 0.4);
+                    top: 0;
+                }
+                img {
+                    margin-top: -20%;
+                    width: 100%;
+                }
+                .title {
+                    position: absolute;
+                    color: map-get(map-get($foundation-palette, primary), second);
+                    font-size: rem-calc(38);
+                    top: 28%;
+                    left: 0;
+                    text-transform: uppercase;
+                }
+                .title-animated {
+                    animation: animate-title 1s linear forwards;
+                }
+                .subtitle-container {
+                    position: absolute;
+                    color: map-get(map-get($foundation-palette, primary), second);
+                    font-weight: 500;
+                    top: 45%;
+                    margin-left: -150px;
+                    h1 {
+                        font-size: rem-calc(68);
+                        text-transform: uppercase;
+                    }
+                    .button-filled {
+                        left: 40%;
+                        top: 90%;
+                    }
+                }
+                .subtitle-animated {
+                    animation: animate-subtitle 1s linear forwards;
+                }
             }
         }
-        .control-arrow {
-            border-radius: 50%;
-            height: 50px;
-            width: 50px;
-            margin-top: 20% !important;
-            background-color: map-get(map-get($foundation-palette, primary), sixth) !important;
-            margin: 0 20px;
-        }
-        // Hiding the thumbnail, by configuration it removes the title animation
-        .thumbs-wrapper {
-            display: none;
-        }
+    }
+    .control-arrow {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin-top: 20% !important;
+        background-color: map-get(map-get($foundation-palette, primary), sixth) !important;
+        margin: 0 20px;
+    }
+    // Hiding the thumbnail, by configuration it removes the title animation
+    .thumbs-wrapper {
+        display: none;
     }
 }
 
@@ -53,6 +72,17 @@ $bannerHeight: 700px;
     }
     to {
         left: 40%;
+        opacity: 1;
+    }
+}
+
+@keyframes animate-subtitle {
+    from {
+        top: 45%;
+        opacity: 0;
+    }
+    to {
+        top: 35%;
         opacity: 1;
     }
 }

@@ -1,0 +1,8 @@
+.button-filled {
+    position: absolute;
+    background-color: map-get(map-get($foundation-palette, primary), first);
+    border: none;
+    padding: rem-calc(10 30);
+    font-size: rem-calc(30);
+    color: map-get(map-get($foundation-palette, primary), second);
+}
