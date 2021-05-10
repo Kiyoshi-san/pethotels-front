@@ -1,5 +1,3 @@
-@import 'util/include';
-
 // 0. Fonts
 // --------
 
@@ -35,6 +33,7 @@ $foundation-palette: (
       second: #FFFFFF, //map-get(map-get($foundation-latam, 'primary'), 'second')
       third: #444444, //map-get(map-get($foundation-latam, 'primary'), 'third')
       fourth: #E12F2F, //map-get(map-get($foundation-latam, 'primary'), 'fourth')
+      fifth: #202020,
     ),
     secondary: (
       first: #AC0000, //map-get(map-get($foundation-latam, 'secondary'), 'first')
@@ -120,3 +119,5 @@ $header-sizes: (
     'h6': 16,
   ),
 );
+
+@import 'util/include';

@@ -51,32 +51,17 @@
         /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
     }
 
-    &-logout:before { content: '\e800'; } /* '' */
-    &-shopping-bag:before { content: '\e801'; } /* '' */
-    &-profile:before { content: '\e802'; } /* '' */
-    &-heart-border:before { content: '\e803'; } /* '' */
-    &-search:before { content: '\e804'; } /* '' */
-    &-cancel:before { content: '\e805'; } /* '' */
-    &-minus:before { content: '\e806'; } /* '' */
-    &-heart:before { content: '\e807'; } /* '' */
-    &-heart-empty:before { content: '\e808'; } /* '' */
-    &-plus:before { content: '\e809'; } /* '' */
-    &-down:before { content: '\e80a'; } /* '' */
-    &-up:before { content: '\e80b'; } /* '' */
-    &-right:before { content: '\e80c'; } /* '' */
-    &-left:before { content: '\e80d'; } /* '' */
-    &-twitter:before { content: '\e80e'; } /* '' */
-    &-facebook:before { content: '\e80f'; } /* '' */
-    &-pinterest:before { content: '\e810'; } /* '' */
-    &-instagram:before { content: '\e811'; } /* '' */
-    &-locator:before { content: '\e812'; } /* '' */
-    &-ok:before { content: '\e813'; } /* '' */
-    &-load:before { content: '\e838'; } /* '' */
-    &-youtube:before { content: '\f16a'; } /* '' */
-    &-eye:before { content: '\e815'; } /* '' */
-    &-eye-closed:before { content: '\e816'; } /* '' */
-    &-printer:before { content: '\e818'; } /* '' */
-    &-minus-2:before { content: '\E814'; } /* '' */
-    &-eye-closed:before { content: '\e816'; } /* '' */
+    &-logo:before { content: '\e81b'; }
+    &-heart-empty:before { content: '\e808'; }
+    &-twitter:before { content: '\e80e'; }
+    &-facebook:before { content: '\e80f'; }
+    &-instagram:before { content: '\e811'; }
+    &-locator:before { content: '\e812'; }
+    &-ok:before { content: '\e813'; }
+    &-eye:before { content: '\e815'; }
+    &-eye-off:before { content: '\e816'; }
+    &-search:before { content: '\e81c'; }
+    &-cart:before { content: '\e81d'; }
+    &-spin:before { content: '\e838'; }
 }
    

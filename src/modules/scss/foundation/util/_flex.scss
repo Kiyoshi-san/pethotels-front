@@ -1,68 +1,60 @@
-$-zf-flex-justify: (
-  'left': flex-start,
-  'right': flex-end,
-  'center': center,
-  'justify': space-between,
-  'spaced': space-around,
-);
+/* 
+<div class="row">
+  <div class="col">
+    ...
+  </div>
+  <div class="col">
+    ...
+  </div>
+</div>
+<!--next row-->
+<div class="row">
+  <div class="col">
+    ...
+  </div>
+  <div class="col">
+    ...
+  </div>
+</div>
+*/
 
-$-zf-flex-align: (
-  'top': flex-start,
-  'bottom': flex-end,
-  'middle': center,
-  'stretch': stretch,
-);
-
-/// Enables flexbox by adding `display: flex` to the element.
-@mixin flex {
+.container {
+  max-width: 1335px;
+  margin: 0 auto;
+}
+.grid-row {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
-/// Horizontally or vertically aligns the items within a flex container.
-///
-/// @param {Keyword} $x [null] - Horizontal alignment to use. Can be `left`, `right`, `center`, `justify`, or `spaced`. Or, set it to `null` (the default) to not set horizontal alignment.
-/// @param {Keyword} $y [null] - Vertical alignment to use. Can be `top`, `bottom`, `middle`, or `stretch`. Or, set it to `null` (the default) to not set vertical alignment.
-@mixin flex-align($x: null, $y: null) {
-  @if $x {
-    @if map-has-key($-zf-flex-justify, $x) {
-      $x: map-get($-zf-flex-justify, $x);
-    }
-    @else {
-      @warn 'flex-grid-row-align(): #{$x} is not a valid value for horizontal alignment. Use left, right, center, justify, or spaced.'
-    }
-  }
-
-  @if $y {
-    @if map-has-key($-zf-flex-align, $y) {
-      $y: map-get($-zf-flex-align, $y);
-    }
-    @else {
-      @warn 'flex-grid-row-align(): #{$y} is not a valid value for vertical alignment. Use top, bottom, middle, or stretch.'
-    }
-  }
-
-  justify-content: $x;
-  align-items: $y;
+.grid-item {
+  height: 550px;
+  flex-basis: 20%;
+  -ms-flex: auto;
+  width: 259px;
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-/// Vertically align a single column within a flex row. Apply this mixin to a flex column.
-///
-/// @param {Keyword} $y [null] - Vertical alignment to use. Can be `top`, `bottom`, `middle`, or `stretch`. Or, set it to `null` (the default) to not set vertical alignment.
-@mixin flex-align-self($y: null) {
-  @if $y {
-    @if map-has-key($-zf-flex-align, $y) {
-      $y: map-get($-zf-flex-align, $y);
-    }
-    @else {
-      @warn 'flex-grid-column-align(): #{$y} is not a valid value for alignment. Use top, bottom, middle, or stretch.'
-    }
+@media(max-width: map-get($breakpoints, xlarge)) {
+  .grid-item {
+    flex-basis: 33.33%;
   }
-
-  align-self: $y;
 }
-
-/// Changes the source order of a flex child. Children with lower numbers appear first in the layout.
-/// @param {Number} $order [0] - Order number to apply.
-@mixin flex-order($order: 0) {
-  order: $order;
+@media(max-width: map-get($breakpoints, mlarge)) {
+   .grid-item {
+    flex-basis: 33.33%;
+  }
+}
+@media(max-width: map-get($breakpoints, large)) {
+  .grid-item {
+    flex-basis: 50%;
+  }
+}
+@media(max-width: map-get($breakpoints, medium)) {
+  .grid-item {
+    flex-basis: 100%;
+  }
 }
