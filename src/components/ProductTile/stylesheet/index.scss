@@ -29,3 +29,10 @@
         }
     }
 }
+
+
+@media(max-width: map-get($breakpoints, medium)) {
+  .product-tile {
+    margin: 0 auto;
+  }
+}

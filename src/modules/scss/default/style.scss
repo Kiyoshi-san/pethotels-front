@@ -13,3 +13,9 @@ body {
         max-width: rem-calc($bodyContainerWidth);
     }
 }
+
+.body-row {
+    display: block;
+    margin: 0 auto;
+    max-width: rem-calc($bodyContainerWidth);
+}

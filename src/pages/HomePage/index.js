@@ -54,19 +54,18 @@ export default function HomePage() {
   return (
     <div className="pt_homepage">
       <Banner></Banner>
-      <div className="deals-of-the-day-gray">
-        <div className="body-container">
-          <div className="body-box">
-            <DealsOfTheDay />
-          </div>
-        </div>
+      <div className="body-row">
+        <DealsOfTheDay />
+      </div>
+      <div className="body-row">
+        <ProductCarousel products={products} title="Produtos Relcionados" />
+      </div>
+      <div className="body-row">
+        <ProductCarousel products={products} title="Produtos Relcionados" />
       </div>
       <div className="deals-of-the-day-white">
         <div className="body-container">
-          <div className="body-box">
-            <ProductCarousel products={products} title="Produtos Relcionados" />
-            <ProductCarousel products={products} title="Mais Vendidos" />
-          </div>
+          <div className="body-box"></div>
         </div>
       </div>
     </div>
