@@ -8,9 +8,11 @@ export default function HomePage() {
   return (
     <div className="pt_homepage">
       <Banner></Banner>
-      <div className="body-container">
-        <div className="body-box">
-          <DealsOfTheDay />
+      <div className="deals-of-the-day-background">
+        <div className="body-container">
+          <div className="body-box">
+            <DealsOfTheDay />
+          </div>
         </div>
       </div>
     </div>

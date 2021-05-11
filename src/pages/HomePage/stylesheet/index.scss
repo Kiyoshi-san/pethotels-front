@@ -1,0 +1,4 @@
+.deals-of-the-day-background {
+    background-color: map-get(map-get($foundation-palette, secondary), fourth);
+    height: rem-calc(490);
+}
