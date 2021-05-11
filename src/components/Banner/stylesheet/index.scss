@@ -4,7 +4,7 @@ $bannerHeight: 700px;
     .react-multi-carousel-track  {
         .carousel-item-height {
             max-height: $bannerHeight;
-            div {
+            &>div {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -35,13 +35,15 @@ $bannerHeight: 700px;
                     color: map-get(map-get($foundation-palette, primary), second);
                     font-weight: 500;
                     top: 45%;
-                    margin-left: -150px;
+                    &>div {
+                        display: flex;
+                        justify-content: center;
+                    }
                     h1 {
                         font-size: 4.25vw;
                         text-transform: uppercase;
                     }
                     .button-filled {
-                        left: 40%;
                         top: 90%;
                     }
                 }
@@ -93,4 +95,48 @@ $bannerHeight: 700px;
         top: 35%;
         opacity: 1;
     }
+}
+
+@media(max-width: map-get($breakpoints, medium)) {
+    .carousel-banner-container {
+        .react-multi-carousel-track  {
+            .carousel-item-height {
+                .title {
+                    top: 13%;
+                }
+                .subtitle-container {
+                    margin-left: auto;
+                    .button-filled {
+                        display: none;
+                    }                    
+                }
+            }
+        }
+    }
+
+    @keyframes animate-title {
+        from {
+            top: 13%;
+            left: 0;
+            opacity: 0;
+        }
+        to {
+            top: 13%;
+            left: 40%;
+            opacity: 1;
+        }
+    }
+
+    @keyframes animate-subtitle {
+        from {
+            top: 25%;
+            opacity: 0;
+        }
+        to {
+            top: 15%;
+            opacity: 1;
+            margin-left: auto;
+        }
+    }
+
 }
