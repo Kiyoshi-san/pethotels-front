@@ -3,7 +3,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 0;
-    bottom: rem-calc(100);
     .left-panel {
         background-color: map-get(map-get($foundation-palette, primary), first);
         color: map-get(map-get($foundation-palette, primary), second);

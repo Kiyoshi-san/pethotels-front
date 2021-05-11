@@ -8,17 +8,23 @@ export default function ProductCarousel(props) {
   const { products, title } = props;
 
   const responsive = {
-    desktop: {
+    superLargeDesktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 4,
       slidesToSlide: 4, // optional, default to 1.
       partialVisibilityGutter: 4, // this is needed to tell the amount of px that should be visible.
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
+    desktop: {
+      breakpoint: { max: 1024, min: 768 },
       items: 3,
       slidesToSlide: 3, // optional, default to 1.
       partialVisibilityGutter: 3, // this is needed to tell the amount of px that should be visible.
+    },
+    tablet: {
+      breakpoint: { max: 767, min: 464 },
+      items: 2,
+      slidesToSlide: 2, // optional, default to 1.
+      partialVisibilityGutter: 2, // this is needed to tell the amount of px that should be visible.
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },

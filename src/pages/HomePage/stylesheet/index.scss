@@ -1,8 +1,10 @@
-.deals-of-the-day-gray {
+.bg-gray {
     background-color: map-get(map-get($foundation-palette, secondary), fourth);
-    height: rem-calc(490);
 }
-.deals-of-the-day-white {
+.bg-white {
     background-color: map-get(map-get($foundation-palette, primary), second);
-    height: rem-calc(490);
+}
+
+.deals-of-the-day-container {
+    bottom: rem-calc(100);
 }
