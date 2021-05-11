@@ -5,7 +5,7 @@ export default function Search() {
     console.log(e);
   };
   return (
-    <div className="search-component">
+    <div className="search-component hide-for-small-only">
       <form onSubmit={submitHandler}>
         <div className="input-container">
           <input type="text" placeholder="Buscar" />

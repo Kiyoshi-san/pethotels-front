@@ -22,7 +22,7 @@ $bannerHeight: 700px;
                 .title {
                     position: absolute;
                     color: map-get(map-get($foundation-palette, primary), second);
-                    font-size: rem-calc(38);
+                    font-size: 2.375vw;
                     top: 28%;
                     left: 0;
                     text-transform: uppercase;
@@ -37,7 +37,7 @@ $bannerHeight: 700px;
                     top: 45%;
                     margin-left: -150px;
                     h1 {
-                        font-size: rem-calc(68);
+                        font-size: 4.25vw;
                         text-transform: uppercase;
                     }
                     .button-filled {

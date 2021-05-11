@@ -3,6 +3,7 @@
     background: rgba(0,0,0,0.7);
     color: map-get(map-get($foundation-palette, primary), second);
     padding: rem-calc(10 50);
+    align-items: center;
     .icon-logo {
         display: flex;
         align-items: center;
@@ -46,6 +47,39 @@
             transition: all 0.3s;
             &:hover {
                 color: map-get(map-get($foundation-palette, primary), first);
+                }
+            }
+        }
+    }
+}
+
+// MOBILE
+@media(max-width: map-get($breakpoints, medium)) {
+    .top-header-menu-container {
+        padding: rem-calc(10 5);
+        .icon-logo {
+            &:before {
+                font-size: rem-calc(60);
+            }
+        }
+        .cta-icons {
+            margin-left: auto;
+            .icon {
+                &-heart-empty {
+                    &:before {
+                        font-size: rem-calc(27);
+                    }
+                }
+                &-cart {
+                    &:before {
+                        font-size: rem-calc(35);
+                    }
+                }
+                &-profile {
+                    margin-left: rem-calc(6);
+                    &:before {
+                        font-size: rem-calc(32);
+                    }
                 }
             }
         }

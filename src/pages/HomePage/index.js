@@ -70,7 +70,7 @@ export default function HomePage() {
           <ProductCarousel products={products} title="Produtos Relcionados" />
         </div>
       </div>
-      <div className="body-row-container bg-gray">
+      <div className="body-row-container bg-white">
         <div className="body-row">
           <ProductCarousel products={products} title="Produtos Relcionados" />
         </div>

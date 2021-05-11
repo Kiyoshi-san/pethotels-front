@@ -24,3 +24,22 @@ body {
         max-width: rem-calc($bodyContainerWidth);
     }
 }
+
+.hide {
+    display: none;
+}
+
+@media(min-width: map-get($breakpoints, medium)) {
+    .show-for-small-only {
+        display: none;
+    }
+}
+
+@media(max-width: map-get($breakpoints, medium)) {
+    .hide-for-small-only {
+        display: none;
+    }
+}
+
+
+
