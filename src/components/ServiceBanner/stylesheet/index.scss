@@ -1,0 +1,48 @@
+.service-banner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    margin: rem-calc(20 0);
+    .service-box {
+        position: relative;
+        display: flex;
+        padding: rem-calc(20);
+        justify-content: center;
+        &:nth-child(1), &:nth-child(3) {
+            background-color: map-get(map-get($foundation-palette, secondary), second);
+        }
+        &:nth-child(1) {
+            &>img {
+                position: absolute;
+                right: rem-calc(-1);
+                width: rem-calc(38);
+                top: 0;
+                transform: rotate(180deg);
+            }            
+        }
+        &:nth-child(2) {
+            background-color: map-get(map-get($foundation-palette, secondary), third);     
+        }
+        &:nth-child(3) {
+            &>img {
+                position: absolute;
+                left: rem-calc(-1);
+                width: rem-calc(38);
+                top: 0;
+            }            
+        }
+        .description {
+            h3, span {
+                @include Poppins(400);
+                display: block;
+                color: map-get(map-get($foundation-palette, primary), second);
+            }
+            h3 {
+                font-weight: 800;
+                font-size: rem-calc(16);
+            }
+            span {
+                font-size: rem-calc(12);
+            }
+        }
+    }
+}

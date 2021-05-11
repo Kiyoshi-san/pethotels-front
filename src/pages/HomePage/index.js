@@ -5,6 +5,7 @@ import Banner from "../../components/Banner";
 import DealsOfTheDay from "../../components/DealsOfTheDay";
 import ProductCarousel from "../../components/ProductCarousel";
 import CategoryBanners from "../../components/CategoryBanners";
+import ServiceBanner from "../../components/ServiceBanner/index";
 
 export default function HomePage() {
   const [products, setProducts] = useState([
@@ -68,6 +69,11 @@ export default function HomePage() {
       <div className="body-row-container bg-white">
         <div className="body-row">
           <ProductCarousel products={products} title="Produtos Relcionados" />
+        </div>
+      </div>
+      <div className="body-row-container bg-white">
+        <div className="body-row">
+          <ServiceBanner />
         </div>
       </div>
       <div className="body-row-container bg-white">
