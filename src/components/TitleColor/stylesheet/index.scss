@@ -1,0 +1,21 @@
+.title-color-container {
+    width: fit-content;
+    margin: rem-calc(20 auto);
+    padding: rem-calc(10 0);
+    border-top: solid rem-calc(1) map-get(map-get($foundation-palette, primary), third);
+    border-bottom: solid rem-calc(1) map-get(map-get($foundation-palette, primary), third);
+    span {
+        &:first-child, &:last-child {
+            font-size: rem-calc(20);
+            text-transform: uppercase;
+        }
+        &:first-child {
+            @include Poppins(800);
+            color: map-get(map-get($foundation-palette, primary), first);
+        }
+        &:last-child {
+            @include Poppins(400);
+            color: map-get(map-get($foundation-palette, primary), third);
+        }
+    }
+}

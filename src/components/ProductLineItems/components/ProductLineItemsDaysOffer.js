@@ -8,11 +8,13 @@ export default function ProductLineItemsDaysOffer(props) {
       <div className="image-container">
         <img src={image} alt={productName} />
       </div>
-      <ProductTileDescription
-        productName={productName}
-        newPrice={newPrice}
-        ratings={ratings}
-      ></ProductTileDescription>
+      <div className="product-line-description">
+        <ProductTileDescription
+          productName={productName}
+          newPrice={newPrice}
+          ratings={ratings}
+        ></ProductTileDescription>
+      </div>
     </div>
   );
 }
