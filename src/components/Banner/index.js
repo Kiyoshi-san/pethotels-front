@@ -47,6 +47,7 @@ export default function Banner() {
         responsive={responsive}
         ssr={false} // means to render carousel on server-side.
         infinite
+        autoPlay
         autoPlaySpeed={1000}
         keyBoardControl
         customTransition="all 1.5"
