@@ -4,51 +4,8 @@ import ButtonHoverEffect from "../Button/ButtonHoverEffect";
 import ProductTile from "../ProductTile";
 import TitleColor from "../TitleColor";
 
-export default function ProductCarousel() {
-  const [products, setProducts] = useState([
-    {
-      image: "/product_images/brinquedo-osso-cachorro2.png",
-      productName: "slami in ball tip pig eiusmod",
-      oldPrice: "140,00",
-      newPrice: "170,00",
-      ratings: "4",
-    },
-    {
-      image: "/product_images/brinquedo-roda-cachorro.png",
-      productName: "magna sint sirlon",
-      oldPrice: "135,00",
-      newPrice: "155,00",
-      ratings: "2",
-    },
-    {
-      image: "/product_images/brinquedo-osso-cachorro2.png",
-      productName: "enim eu kevin tail enim ve",
-      oldPrice: "115,00",
-      newPrice: "135,00",
-      ratings: "5",
-    },
-    {
-      image: "/product_images/brinquedo-osso-cachorro2.png",
-      productName: "slami in ball tip pig eiusmod",
-      oldPrice: "140,00",
-      newPrice: "170,00",
-      ratings: "4",
-    },
-    {
-      image: "/product_images/brinquedo-roda-cachorro.png",
-      productName: "magna sint sirlon",
-      oldPrice: "135,00",
-      newPrice: "155,00",
-      ratings: "2",
-    },
-    {
-      image: "/product_images/brinquedo-osso-cachorro2.png",
-      productName: "enim eu kevin tail enim ve",
-      oldPrice: "115,00",
-      newPrice: "135,00",
-      ratings: "5",
-    },
-  ]);
+export default function ProductCarousel(props) {
+  const { products, title } = props;
 
   const responsive = {
     desktop: {
@@ -99,7 +56,7 @@ export default function ProductCarousel() {
 
   return (
     <div className="product-carousel">
-      <TitleColor title="Produtos Relcionados" />
+      <TitleColor title={title} />
       <Carousel
         containerClass="product-tile-home-container"
         itemClass="carousel-item-height"
