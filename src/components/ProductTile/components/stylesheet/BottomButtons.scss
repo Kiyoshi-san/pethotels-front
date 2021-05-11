@@ -9,9 +9,13 @@
         padding: rem-calc(15 0);
         cursor: pointer;
         transition: 0.3s all;
+        background: linear-gradient(to left, map-get(map-get($foundation-palette, primary), second) 50%, map-get(map-get($foundation-palette, primary), first) 50%) right;
+        background-size: 201%;
+        transition: .3s ease-out;
         &:hover {
             transform: scaleX(1);
-            background-color: map-get(map-get($foundation-palette, primary), first);
+            background-position: left;
+            
             .icon, span {
                 color: map-get(map-get($foundation-palette, primary), second);
             }

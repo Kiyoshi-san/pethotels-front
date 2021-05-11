@@ -1,0 +1,57 @@
+.category-banners {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 0;
+    .title {
+        position: absolute;
+        text-transform: uppercase;
+        font-size: rem-calc(12);
+        margin-left: rem-calc(10);
+        strong {
+            @include Poppins(800);   
+            letter-spacing: rem-calc(-1);         
+        }
+        span {
+            @include Poppins(400);
+            color: map-get(map-get($foundation-palette, primary), third);
+            letter-spacing: rem-calc(-1);
+        }
+    }
+    .banner {
+        display: block;
+        max-height: rem-calc(200);
+        overflow: hidden;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+        img {
+            width: 100%;
+        }
+        &:nth-child(1) {
+            h1 {
+                strong {
+                    color: map-get(map-get($foundation-palette, primary), first);
+                }
+                span {
+                    color: map-get(map-get($foundation-palette, secondary), fifth);
+                }
+            }
+        }
+        &:nth-child(2) {
+            h1 {
+                strong {
+                    color: map-get(map-get($foundation-palette, secondary), third);
+                }
+            }
+        }
+        &:nth-child(3) {
+            h1 {
+                strong {
+                    color: map-get(map-get($foundation-palette, primary), fourth);
+                }
+            }
+        }
+    }
+}

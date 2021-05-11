@@ -4,6 +4,7 @@ import { listProducts } from "../../redux/actions/product";
 import Banner from "../../components/Banner";
 import DealsOfTheDay from "../../components/DealsOfTheDay";
 import ProductCarousel from "../../components/ProductCarousel";
+import CategoryBanners from "../../components/CategoryBanners";
 
 export default function HomePage() {
   const [products, setProducts] = useState([
@@ -57,6 +58,11 @@ export default function HomePage() {
       <div className="body-row-container bg-gray">
         <div className="body-row">
           <DealsOfTheDay />
+        </div>
+      </div>
+      <div className="body-row-container bg-white">
+        <div className="body-row">
+          <CategoryBanners />
         </div>
       </div>
       <div className="body-row-container bg-white">
