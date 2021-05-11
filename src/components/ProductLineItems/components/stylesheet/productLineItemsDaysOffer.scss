@@ -1,0 +1,29 @@
+.product-line-items-days-offer {
+    display: flex;
+    @include topBottomPadding;
+    padding: rem-calc(10);
+    align-items: center;
+    .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: solid rem-calc(1) map-get(map-get($foundation-palette, secondary), fifth);
+        width: rem-calc(90);
+        height: rem-calc(90);
+        margin-right: rem-calc(10);
+        img {
+            max-height: rem-calc(90);
+            max-width: rem-calc(90);
+        }
+    }
+    .product-tile-description {
+        h3 {
+            @include Poppins(800);
+            font-size: rem-calc(12);
+            color: map-get(map-get($foundation-palette, primary), third);
+        }
+        h3, .price, .rating-stars {
+            text-align: initial;
+        }
+    }
+}

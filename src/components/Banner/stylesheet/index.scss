@@ -51,6 +51,11 @@ $bannerHeight: 700px;
             }
         }
     }
+    .react-multi-carousel-dot {
+        &--active button {
+            background-color: map-get(map-get($foundation-palette, primary), first) !important;
+        }
+    }
     .control-arrow {
         border-radius: 50%;
         height: 50px;
@@ -62,6 +67,9 @@ $bannerHeight: 700px;
     // Hiding the thumbnail, by configuration it removes the title animation
     .thumbs-wrapper {
         display: none;
+    }
+    .react-multi-carousel-dot-list {
+        bottom: rem-calc(115);
     }
 }
 

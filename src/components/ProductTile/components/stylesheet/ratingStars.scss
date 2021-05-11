@@ -1,0 +1,7 @@
+.rating-stars {
+    color: map-get(map-get($foundation-palette, secondary), sixth);
+    text-align: center;
+    .filled {
+        color: map-get(map-get($foundation-palette, secondary), seventh);
+    }
+}

@@ -8,4 +8,9 @@ https://css-tricks.com/introduction-fr-css-unit/
     margin-left: 0;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5625rem 1.5rem;
+    .grid-tile {
+        max-width: 280px;
+        flex-basis: 25%;
+        margin-bottom: 1.5625rem;
+    }
 }

@@ -34,7 +34,6 @@ $foundation-palette: (
       third: #444444, //map-get(map-get($foundation-latam, 'primary'), 'third')
       fourth: #E12F2F, //map-get(map-get($foundation-latam, 'primary'), 'fourth')
       fifth: #202020,
-      sixth: #202020,
     ),
     secondary: (
       first: #AC0000, //map-get(map-get($foundation-latam, 'secondary'), 'first')
@@ -42,6 +41,8 @@ $foundation-palette: (
       third: #13B5E6, //map-get(map-get($foundation-latam, 'secondary'), 'third')
       fourth:#EEEEEE,
       fifth: #DDDDDD,
+      sixth: #999999,
+      seventh: #FF9600,
     )
 );
 
@@ -66,12 +67,15 @@ $social-links: (
 // 2. Breakpoints
 // --------------
 
+// Homepage
+$bodyContainerWidth: 1150px;
+
 $breakpoints: (
   small: 0,
   medium: 768px,
   large: 1047px,
   mlarge: 1024px,
-  xlarge: 1150px
+  xlarge: $bodyContainerWidth
 );
 $breakpoint-classes: (small medium large);
 
@@ -120,5 +124,10 @@ $header-sizes: (
     'h6': 16,
   ),
 );
+
+@mixin topBottomPadding {
+    border-left: rem-calc(1) solid map-get(map-get($foundation-palette, secondary), fifth);    
+    border-bottom: rem-calc(1) solid map-get(map-get($foundation-palette, secondary), fifth);
+}
 
 @import 'util/include';

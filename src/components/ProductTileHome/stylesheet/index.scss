@@ -1,0 +1,57 @@
+$paddingImg: 10px;
+
+.product-tile-home-container {
+    padding: rem-calc($paddingImg);
+    .image-container {
+        img {
+            max-width: 100%;
+        }
+        .expiration-time-container {
+            position: absolute;
+            border: solid 1px map-get(map-get($foundation-palette, secondary), fifth);
+            background-color: map-get(map-get($foundation-palette, primary), second);
+            div {
+                border-bottom: solid 1px map-get(map-get($foundation-palette, secondary), fifth);
+                padding: rem-calc($paddingImg 0);
+                h1, span {
+                    text-align: center;
+                    margin: 0;
+                }
+                h1 {
+                    @include Poppins(800);
+                    font-size: rem-calc(14);
+                    color: map-get(map-get($foundation-palette, primary), first);
+                    padding: rem-calc(0 10);
+                }
+                span {
+                    @include Poppins(400);
+                    font-size: rem-calc(14);
+                    color: map-get(map-get($foundation-palette, primary), third);
+                    display: block;
+                    padding: 0;
+                    width: 100%;
+                }
+                &:last-child {
+                    padding-bottom: rem-calc($paddingImg);
+                    border-bottom: none;
+                }
+            }
+        }
+        .image-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: rem-calc(48);
+            min-height: rem-calc(350);
+            img {
+                max-height: rem-calc(350);
+                max-width: rem-calc(400);
+            }
+        }
+    }
+    .carousel-button-group {
+        position: absolute;
+        bottom: 0;
+        right: rem-calc(30);
+    }
+}

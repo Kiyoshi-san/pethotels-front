@@ -12,7 +12,7 @@ export default function Banner() {
     "title-animated"
   );
   const [animatedClassSubTitle, setAnimatedClassSubTitle] = useState(
-    "title-animated"
+    "subtitle-animated"
   );
 
   const responsive = {

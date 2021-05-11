@@ -1,0 +1,21 @@
+.popular-products-deals {
+    &>.title {
+        @include topBottomPadding;
+        padding: rem-calc(0 20);
+        h1 {
+            margin: 0;
+            padding: rem-calc(10 0);
+            strong, span {
+                font-size: rem-calc(20);
+                color: map-get(map-get($foundation-palette, primary), third);
+                text-transform: uppercase;
+            }
+            strong {
+                @include Poppins(800);                
+            }
+            span {
+                @include Poppins(400);
+            }
+        }
+    }
+}

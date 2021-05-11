@@ -1,0 +1,12 @@
+.mult-categories {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0;
+    margin: rem-calc(20 0);
+    .item-image {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
