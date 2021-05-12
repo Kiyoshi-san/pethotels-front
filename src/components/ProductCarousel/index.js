@@ -77,7 +77,6 @@ export default function ProductCarousel(props) {
         keyBoardControl
         customTransition="all 1.5"
         transitionDuration={3500}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
         centerMode={false}
         partialVisible={false}
