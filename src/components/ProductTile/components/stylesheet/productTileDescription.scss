@@ -23,6 +23,7 @@
         }
         .old-price {
             @include Poppins(400);
+            text-decoration: line-through;
             font-size: rem-calc(12);
             color: map-get(map-get($foundation-palette, secondary), sixth);
             margin-right: rem-calc(10);
