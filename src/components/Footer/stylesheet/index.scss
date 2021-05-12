@@ -47,6 +47,7 @@
                 }
                 .title {
                     position: relative;
+                    white-space: nowrap;
                     h3 {
                         @include Poppins(800);
                         font-size: rem-calc(14);
