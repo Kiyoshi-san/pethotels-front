@@ -29,7 +29,7 @@ $global-header-width: rem-calc(1280);
 
 $foundation-palette: (
     primary: (
-      first: #BEAE59, //map-get(map-get($foundation-latam, 'primary'), 'first')
+      first: #BEAE58, //map-get(map-get($foundation-latam, 'primary'), 'first')
       second: #FFFFFF, //map-get(map-get($foundation-latam, 'primary'), 'second')
       third: #444444, //map-get(map-get($foundation-latam, 'primary'), 'third')
       fourth: #E12F2F, //map-get(map-get($foundation-latam, 'primary'), 'fourth')
@@ -37,12 +37,12 @@ $foundation-palette: (
     ),
     secondary: (
       first: #AC0000, //map-get(map-get($foundation-latam, 'secondary'), 'first')
-      second: #49CCF3, //map-get(map-get($foundation-latam, 'secondary'), 'second')
-      third: #13B5E6, //map-get(map-get($foundation-latam, 'secondary'), 'third')
+      second: #49CCF2, //map-get(map-get($foundation-latam, 'secondary'), 'second')
+      third: #13B5E5, //map-get(map-get($foundation-latam, 'secondary'), 'third')
       fourth:#EEEEEE,
       fifth: #DDDDDD,
       sixth: #999999,
-      seventh: #FF9600,
+      seventh: #FF9601,
     )
 );
 
