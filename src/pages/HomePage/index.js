@@ -6,6 +6,7 @@ import DealsOfTheDay from "../../components/DealsOfTheDay";
 import ProductCarousel from "../../components/ProductCarousel";
 import CategoryBanners from "../../components/CategoryBanners";
 import ServiceBanner from "../../components/ServiceBanner/index";
+import Footer from "../../components/Footer";
 
 export default function HomePage() {
   const [products, setProducts] = useState([
@@ -81,6 +82,7 @@ export default function HomePage() {
           <ProductCarousel products={products} title="Produtos Relcionados" />
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

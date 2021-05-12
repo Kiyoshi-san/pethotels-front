@@ -1,0 +1,156 @@
+.footer-container {
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("../../../assets/images/dog-and-cat.png");
+        background-size: 100%;
+        filter: brightness(0.3);
+    }
+    margin-top: rem-calc(200);
+    .our-services-container {
+        .first-foot-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            .column {
+                padding: rem-calc(50 10 0);
+                &:last-child {
+                    position: relative;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: map-get(map-get($foundation-palette, primary), first);
+                        opacity: 0.6;
+                    }
+                    .title, ul {
+                        margin-left: rem-calc(20);
+                    }
+                    li {
+                        .icon {
+                            margin-right: rem-calc(10);
+                        }
+                        span:hover {
+                            color: map-get(map-get($foundation-palette, primary), second);
+                        }
+                    }
+                    li.image-cards {
+                        padding: rem-calc(20 0 0);
+                        img {
+                            margin-right: rem-calc(5);
+                        }
+                    }
+                }
+                .title {
+                    position: relative;
+                    h3 {
+                        @include Poppins(800);
+                        font-size: rem-calc(14);
+                        color: map-get(map-get($foundation-palette, primary), second);
+                        text-transform: uppercase;
+                        margin-bottom: rem-calc(20);
+                        padding-bottom: rem-calc(20);
+                        border-bottom: rem-calc(5) solid map-get(map-get($foundation-palette, primary), first);
+                        width: rem-calc(50);
+                    }
+                }
+                ul {
+                    position: relative;
+                    list-style-type: none;
+                    padding: 0;
+                    li {
+                        line-height: rem-calc(30);
+                        a, span {
+                            @include Poppins(400);
+                            color: map-get(map-get($foundation-palette, primary), second);
+                            font-size: rem-calc(12);                            
+                            text-decoration: none;
+                            transition: all 0.3s;
+                            &:hover {
+                                color: map-get(map-get($foundation-palette, primary), first);
+                            }
+                            .icon-triangle-right-arrow {
+                                &:before {
+                                    font-size: rem-calc(8);
+                                    margin-top: rem-calc(-2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .second-foot-section {
+            .section {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .title {
+                    h3 {
+                        @include Poppins(800);
+                        font-size: rem-calc(16);
+                        color: map-get(map-get($foundation-palette, primary), second);
+                    }
+                }
+                .download-app {
+                    display: grid;
+                    justify-content: end;
+                    padding: rem-calc(0 20px);
+                    .title {
+                        h3 {
+                            text-align: end;
+                        }
+                    }
+                    .image-mobile {
+                        display: flex;
+                        img {
+                            margin-left: rem-calc(10);
+                        }
+                    }
+                }
+                .follow-us {
+                    .social-icon {
+                        margin-top: rem-calc(27);
+                        .icons {
+                            .icon {
+                                background-color: map-get(map-get($foundation-palette, primary), fifth);
+                                color: map-get(map-get($foundation-palette, primary), second);
+                                padding: rem-calc(10);
+                                margin-right: rem-calc(10);
+                                border-radius: rem-calc(4);
+                            }
+                        }
+                    }
+                }
+            }
+            .copyright {
+                display: flex;
+                justify-content: center;
+                padding: rem-calc(20 0);
+                span {
+                    @include Poppins(400);
+                    font-size: rem-calc(12);
+                    color: map-get(map-get($foundation-palette, primary), second);
+                    &.chippy-enterprise {
+                        color: map-get(map-get($foundation-palette, primary), first);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: map-get($breakpoints, medium)) {
+    .footer-container {   
+        .our-services-container {
+            .second-foot-section {
+                .section {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+}
