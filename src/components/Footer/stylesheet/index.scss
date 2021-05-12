@@ -108,6 +108,10 @@
                         display: flex;
                         img {
                             margin-left: rem-calc(10);
+                            cursor: pointer;
+                            &:hover {
+                                opacity: 0.8;
+                            }
                         }
                     }
                 }
@@ -121,6 +125,11 @@
                                 padding: rem-calc(10);
                                 margin-right: rem-calc(10);
                                 border-radius: rem-calc(4);
+                                cursor: pointer;
+                                transition: 0.3s all;
+                                &:hover {
+                                    background-color: map-get(map-get($foundation-palette, primary), first);
+                                }
                             }
                         }
                     }
