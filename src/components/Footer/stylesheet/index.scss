@@ -158,6 +158,17 @@
             .second-foot-section {
                 .section {
                     grid-template-columns: 1fr;
+                    .download-app {
+                        justify-content: initial;
+                        .title {
+                            h3 {
+                                text-align: initial;
+                            }
+                        }
+                    }
+                    .follow-us {
+                        padding: rem-calc(0 20);
+                    }
                 }
             }
         }

@@ -122,8 +122,8 @@ export default function Footer() {
               <div className="copyright">
                 <span>
                   ©2021 SW Chippy Enterprise. All Rights Reserved. Designed by
+                  <span className="chippy-enterprise"> Chippy</span>
                 </span>
-                <span className="chippy-enterprise"> Chippy</span>
               </div>
             </div>
           </div>
