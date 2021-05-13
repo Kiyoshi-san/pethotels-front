@@ -140,7 +140,8 @@
             .copyright {
                 display: flex;
                 justify-content: center;
-                padding: rem-calc(20 0);
+                padding: rem-calc(20);
+                text-align: center;
                 span {
                     @include Poppins(400);
                     font-size: rem-calc(12);
