@@ -59,8 +59,8 @@ export default function ProductTileHome(props) {
           autoPlay
           autoPlaySpeed={1000}
           keyBoardControl
-          customTransition="all 1.5"
-          transitionDuration={3500}
+          /* BUG - customTransition="all 1.5"
+          transitionDuration={3500} */
           removeArrowOnDeviceType={["tablet", "mobile"]}
           dotListClass="custom-dot-list-style"
           centerMode={false}

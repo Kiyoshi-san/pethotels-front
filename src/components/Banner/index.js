@@ -8,12 +8,10 @@ import img3 from "../../assets/images/banner/banner3.jpg";
 import img4 from "../../assets/images/banner/banner4.jpg";
 
 export default function Banner() {
-  const [animatedClassTitle, setAnimatedClassTitle] = useState(
-    "title-animated"
-  );
-  const [animatedClassSubTitle, setAnimatedClassSubTitle] = useState(
-    "subtitle-animated"
-  );
+  const [animatedClassTitle, setAnimatedClassTitle] =
+    useState("title-animated");
+  const [animatedClassSubTitle, setAnimatedClassSubTitle] =
+    useState("subtitle-animated");
 
   const responsive = {
     desktop: {
@@ -50,8 +48,8 @@ export default function Banner() {
         autoPlay
         autoPlaySpeed={1000}
         keyBoardControl
-        customTransition="all 1.5"
-        transitionDuration={3500}
+        /* BUG - customTransition="all 1.5"
+        transitionDuration={3500} */
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style"
         beforeChange={(nextSlide, { currentSlide, onMove }) => {

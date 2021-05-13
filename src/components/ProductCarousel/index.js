@@ -76,8 +76,8 @@ export default function ProductCarousel(props) {
           autoPlay
           autoPlaySpeed={1000}
           keyBoardControl
-          customTransition="all 1.5"
-          transitionDuration={3500}
+          /* BUG - customTransition="all 1.5"
+          transitionDuration={3500} */
           dotListClass="custom-dot-list-style"
           centerMode={false}
           partialVisible={false}
