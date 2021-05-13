@@ -57,7 +57,7 @@ export default function ProductTileHome(props) {
           ssr={false} // means to render carousel on server-side.
           infinite
           autoPlay
-          autoPlaySpeed={1000}
+          autoPlaySpeed={5000}
           keyBoardControl
           /* BUG - customTransition="all 1.5"
           transitionDuration={3500} */
