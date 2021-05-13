@@ -9,4 +9,24 @@
             right: rem-calc(6);
         }
     }
+    .product-tile-home-container {
+        ul.react-multi-carousel-track {
+            li {
+                right: 0;
+            }
+        }
+    }
+
+}
+
+@media(max-width: map-get($breakpoints, medium)) {
+    .product-carousel {
+    .product-tile-home-container {
+        ul.react-multi-carousel-track {
+            li {
+                right: rem-calc(8);
+            }
+        }
+    }
+    }
 }
