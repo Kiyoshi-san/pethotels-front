@@ -18,4 +18,8 @@
             }
         }
     }
+    .productlist {
+        max-height: rem-calc(450);
+        overflow-y: auto;
+    }
 }

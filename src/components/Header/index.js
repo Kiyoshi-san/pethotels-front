@@ -1,10 +1,13 @@
 import React from "react";
 import Search from "../Search";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <div className="top-header-menu-container">
-      <i className="icon icon-logo"></i>
+      <Link to={"/"}>
+        <i className="icon icon-logo"></i>
+      </Link>
       <Search />
       <div className="cta-icons">
         <i className="icon icon-heart-empty"></i>

@@ -9,6 +9,7 @@
         align-items: center;
         flex: 0 0 18%;
         cursor: pointer;
+        color: map-get(map-get($foundation-palette, primary), second);
         &:before {
             font-size: rem-calc(80);
         }

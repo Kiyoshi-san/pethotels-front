@@ -8,14 +8,14 @@ export default function ProductTile(props) {
   return (
     <div className="product-tile">
       <div className="image-product-container">
-        <img src={product.image} alt={product.productName} />
+        <img src={product.image} alt={product.name} />
       </div>
       <div className="description">
         <ProductTileDescription
-          productName={product.productName}
+          name={product.name}
           oldPrice={product.oldPrice}
           newPrice={product.newPrice}
-          ratings={product.ratings}
+          rating={product.rating}
         ></ProductTileDescription>
       </div>
       <div className="product-tile-bottom-buttons">

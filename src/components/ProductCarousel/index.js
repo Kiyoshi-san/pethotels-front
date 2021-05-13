@@ -63,29 +63,32 @@ export default function ProductCarousel(props) {
   return (
     <div className="product-carousel">
       <TitleColor title={title} />
-      <Carousel
-        containerClass="product-tile-home-container"
-        itemClass="carousel-item-height"
-        swipeable
-        draggable
-        showDots={false}
-        responsive={responsive}
-        ssr={false} // means to render carousel on server-side.
-        infinite
-        autoPlay
-        autoPlaySpeed={1000}
-        keyBoardControl
-        customTransition="all 1.5"
-        transitionDuration={3500}
-        dotListClass="custom-dot-list-style"
-        centerMode={false}
-        partialVisible={false}
-        customRightArrow={<CustomRightArrow />}
-        customLeftArrow={<CustomLeftArrow />}
-      >
-        {products?.length &&
-          products.map((prd) => <ProductTile product={prd} />)}
-      </Carousel>
+      {products?.length && (
+        <Carousel
+          containerClass="product-tile-home-container"
+          itemClass="carousel-item-height"
+          swipeable
+          draggable
+          showDots={false}
+          responsive={responsive}
+          ssr={false} // means to render carousel on server-side.
+          infinite
+          autoPlay
+          autoPlaySpeed={1000}
+          keyBoardControl
+          customTransition="all 1.5"
+          transitionDuration={3500}
+          dotListClass="custom-dot-list-style"
+          centerMode={false}
+          partialVisible={false}
+          customRightArrow={<CustomRightArrow />}
+          customLeftArrow={<CustomLeftArrow />}
+        >
+          {products?.map((prd) => (
+            <ProductTile product={prd} />
+          ))}
+        </Carousel>
+      )}
     </div>
   );
 }

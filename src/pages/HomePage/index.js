@@ -5,61 +5,35 @@ import Banner from "../../components/Banner";
 import DealsOfTheDay from "../../components/DealsOfTheDay";
 import ProductCarousel from "../../components/ProductCarousel";
 import CategoryBanners from "../../components/CategoryBanners";
-import ServiceBanner from "../../components/ServiceBanner/index";
-import Footer from "../../components/Footer";
+import ServiceBanner from "../../components/ServiceBanner";
+import { listProductOffers } from "../../redux/actions/product";
 
 export default function HomePage() {
-  const [products, setProducts] = useState([
-    {
-      image: "/product_images/brinquedo-osso-cachorro2.png",
-      productName: "slami in ball tip pig eiusmod",
-      oldPrice: "140,00",
-      newPrice: "170,00",
-      ratings: "4",
-    },
-    {
-      image: "/product_images/brinquedo-roda-cachorro.png",
-      productName: "magna sint sirlon",
-      oldPrice: "135,00",
-      newPrice: "155,00",
-      ratings: "2",
-    },
-    {
-      image: "/product_images/brinquedo-osso-cachorro2.png",
-      productName: "enim eu kevin tail enim ve",
-      oldPrice: "115,00",
-      newPrice: "135,00",
-      ratings: "5",
-    },
-    {
-      image: "/product_images/brinquedo-osso-cachorro2.png",
-      productName: "slami in ball tip pig eiusmod",
-      oldPrice: "140,00",
-      newPrice: "170,00",
-      ratings: "4",
-    },
-    {
-      image: "/product_images/brinquedo-roda-cachorro.png",
-      productName: "magna sint sirlon",
-      oldPrice: "135,00",
-      newPrice: "155,00",
-      ratings: "2",
-    },
-    {
-      image: "/product_images/brinquedo-osso-cachorro2.png",
-      productName: "enim eu kevin tail enim ve",
-      oldPrice: "115,00",
-      newPrice: "135,00",
-      ratings: "5",
-    },
-  ]);
+  const [days, setDays] = useState(780);
+  const [hours, setHours] = useState(4);
+  const [mins, setMins] = useState(26);
+  const [secs, setSecs] = useState(42);
+
+  const productOffers = useSelector((state) => state.productOffers);
+  const { loading, data, error } = productOffers;
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(listProductOffers());
+  }, [dispatch]);
 
   return (
     <div className="pt_homepage">
       <Banner></Banner>
       <div className="body-row-container bg-gray">
         <div className="body-row">
-          <DealsOfTheDay />
+          <DealsOfTheDay
+            products={data}
+            days={days}
+            hours={hours}
+            mins={mins}
+            secs={secs}
+          />
         </div>
       </div>
       <div className="body-row-container bg-white">
@@ -69,7 +43,7 @@ export default function HomePage() {
       </div>
       <div className="body-row-container bg-white">
         <div className="body-row">
-          <ProductCarousel products={products} title="Produtos Relcionados" />
+          <ProductCarousel products={data} title="Produtos Relacionados" />
         </div>
       </div>
       <div className="body-row-container bg-white">
@@ -79,10 +53,9 @@ export default function HomePage() {
       </div>
       <div className="body-row-container bg-white">
         <div className="body-row">
-          <ProductCarousel products={products} title="Produtos Relcionados" />
+          <ProductCarousel products={data} title="Produtos Relacionados" />
         </div>
       </div>
-      <Footer></Footer>
     </div>
   );
 }

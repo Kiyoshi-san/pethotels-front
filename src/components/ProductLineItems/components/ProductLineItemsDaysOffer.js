@@ -2,17 +2,17 @@ import React from "react";
 import ProductTileDescription from "../../ProductTile/components/ProductTileDescription";
 
 export default function ProductLineItemsDaysOffer(props) {
-  const { image, productName, newPrice, ratings } = props;
+  const { image, name, newPrice, rating } = props;
   return (
     <div className="product-line-items-days-offer">
       <div className="image-container">
-        <img src={image} alt={productName} />
+        <img src={image} alt={name} />
       </div>
       <div className="product-line-description">
         <ProductTileDescription
-          productName={productName}
+          name={name}
           newPrice={newPrice}
-          ratings={ratings}
+          rating={rating}
         ></ProductTileDescription>
       </div>
     </div>

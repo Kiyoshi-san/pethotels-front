@@ -4,17 +4,8 @@ import Carousel from "react-multi-carousel";
 import ButtonHoverEffect from "../Button/ButtonHoverEffect";
 
 export default function ProductTileHome(props) {
-  const {
-    days,
-    hours,
-    mins,
-    secs,
-    productImage,
-    productName,
-    oldPrice,
-    newPrice,
-    ratings,
-  } = props;
+  const { days, hours, mins, secs } = props;
+  const { products } = props;
 
   const responsive = {
     desktop: {
@@ -54,88 +45,64 @@ export default function ProductTileHome(props) {
   };
 
   return (
-    <Carousel
-      containerClass="product-tile-home-container"
-      itemClass="carousel-item-height"
-      swipeable
-      draggable
-      showDots={false}
-      responsive={responsive}
-      ssr={false} // means to render carousel on server-side.
-      infinite
-      autoPlay
-      autoPlaySpeed={1000}
-      keyBoardControl
-      customTransition="all 1.5"
-      transitionDuration={3500}
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-      dotListClass="custom-dot-list-style"
-      centerMode={false}
-      partialVisible={false}
-      arrows={false}
-      customButtonGroup={<ButtonGroup />}
-    >
-      <div className="image-container">
-        <div className="expiration-time-container">
-          <div className="days">
-            <h1>{days}</h1>
-            <span>dias</span>
-          </div>
-          <div className="hours">
-            <h1>{hours}</h1>
-            <span>horas</span>
-          </div>
-          <div className="minutes">
-            <h1>{mins}</h1>
-            <span>mins</span>
-          </div>
-          <div className="secs">
-            <h1>{secs}</h1>
-            <span>segs</span>
-          </div>
-        </div>
-        <div className="image-box">
-          <img src={productImage} alt="brinquedo-de-cachorro" />
-        </div>
-        <ProductTileDescription
-          productName={productName}
-          oldPrice={oldPrice}
-          newPrice={newPrice}
-          ratings={ratings}
-        ></ProductTileDescription>
-      </div>
-      <div className="image-container">
-        <div className="expiration-time-container">
-          <div className="days">
-            <h1>{days + 12}</h1>
-            <span>dias</span>
-          </div>
-          <div className="hours">
-            <h1>{hours + 12}</h1>
-            <span>horas</span>
-          </div>
-          <div className="minutes">
-            <h1>{mins + 12}</h1>
-            <span>mins</span>
-          </div>
-          <div className="secs">
-            <h1>{secs + 12}</h1>
-            <span>segs</span>
-          </div>
-        </div>
-        <div className="image-box">
-          <img
-            src={"/product_images/brinquedo-roda-cachorro.png"}
-            alt="brinquedo-de-cachorro"
-          />
-        </div>
-        <ProductTileDescription
-          productName="Roda cachorro"
-          oldPrice="R$ 25,00"
-          newPrice="R$ 20,00"
-          ratings="4"
-        ></ProductTileDescription>
-      </div>
-    </Carousel>
+    <>
+      {products?.length && (
+        <Carousel
+          containerClass="product-tile-home-container"
+          itemClass="carousel-item-height"
+          swipeable
+          draggable
+          showDots={false}
+          responsive={responsive}
+          ssr={false} // means to render carousel on server-side.
+          infinite
+          autoPlay
+          autoPlaySpeed={1000}
+          keyBoardControl
+          customTransition="all 1.5"
+          transitionDuration={3500}
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          dotListClass="custom-dot-list-style"
+          centerMode={false}
+          partialVisible={false}
+          arrows={false}
+          customButtonGroup={<ButtonGroup />}
+        >
+          {products?.map((prod) => (
+            <>
+              <div className="image-container">
+                <div className="expiration-time-container">
+                  <div className="days">
+                    <h1>{days}</h1>
+                    <span>dias</span>
+                  </div>
+                  <div className="hours">
+                    <h1>{hours}</h1>
+                    <span>horas</span>
+                  </div>
+                  <div className="minutes">
+                    <h1>{mins}</h1>
+                    <span>mins</span>
+                  </div>
+                  <div className="secs">
+                    <h1>{secs}</h1>
+                    <span>segs</span>
+                  </div>
+                </div>
+                <div className="image-box">
+                  <img src={prod.image} alt="brinquedo-de-cachorro" />
+                </div>
+                <ProductTileDescription
+                  name={prod.name}
+                  oldPrice={prod.oldPrice}
+                  newPrice={prod.newPrice}
+                  rating={prod.rating}
+                ></ProductTileDescription>
+              </div>
+            </>
+          ))}
+        </Carousel>
+      )}
+    </>
   );
 }

@@ -3,41 +3,9 @@ import MultCategories from "./MultCategories";
 import ProductTileHome from "../ProductTileHome";
 import PopularProductsDeals from "./components/PopularProductsDeals";
 
-export default function DealsOfTheDay() {
-  const [days, setDays] = useState(780);
-  const [hours, setHours] = useState(4);
-  const [mins, setMins] = useState(26);
-  const [secs, setSecs] = useState(42);
-  const [oldPrice, setOldPrice] = useState(190.0);
-  const [newPrice, setNewPrice] = useState(180.0);
-  const [ratings, setRatings] = useState(180.0);
-  const [daysOffer, setDaysOffer] = useState([
-    {
-      image: "/product_images/brinquedo-osso-cachorro2.png",
-      productName: "slami in ball tip pig eiusmod",
-      newPrice: "170,00",
-      ratings: "4",
-    },
-    {
-      image: "/product_images/brinquedo-roda-cachorro.png",
-      productName: "magna sint sirlon",
-      newPrice: "155,00",
-      ratings: "2",
-    },
-    {
-      image: "/product_images/brinquedo-osso-cachorro2.png",
-      productName: "enim eu kevin tail enim ve",
-      newPrice: "135,00",
-      ratings: "5",
-    },
-  ]);
-  //   const img = require("../../assets/images/products/brinquedo-osso-cachorro.png");
-  //   const [productImage, setProductImage] = useState(img.default);
-  //   When it's in a public folder, it can be declared directly by path like this below
-  const [productImage, setProductImage] = useState(
-    "/product_images/brinquedo-osso-cachorro2.png"
-  );
-  const [productName, setProductName] = useState("AUTE BEEF");
+export default function DealsOfTheDay(props) {
+  const { days, hours, mins, secs } = props;
+  const { products } = props;
 
   useEffect(() => {
     //   TODO BRING EXPIRATION TIME
@@ -68,15 +36,11 @@ export default function DealsOfTheDay() {
           hours={hours}
           mins={mins}
           secs={secs}
-          productImage={productImage}
-          productName={productName}
-          oldPrice={oldPrice}
-          newPrice={newPrice}
-          ratings={ratings}
+          products={products}
         ></ProductTileHome>
       </div>
       <div className="right-panel">
-        <PopularProductsDeals daysOffer={daysOffer}></PopularProductsDeals>
+        <PopularProductsDeals daysOffer={products}></PopularProductsDeals>
       </div>
     </div>
   );

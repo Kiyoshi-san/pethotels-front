@@ -10,16 +10,19 @@ export default function PopularProductsDeals(props) {
           <strong>Produtos</strong> <span>populares</span>
         </h1>
       </div>
-      {daysOffer?.length &&
-        daysOffer.map((dO) => (
-          <ProductLineItemsDaysOffer
-            key={dO.name}
-            image={dO.image}
-            productName={dO.productName}
-            newPrice={dO.newPrice}
-            ratings={dO.ratings}
-          />
-        ))}
+      <div className="productlist">
+        {daysOffer?.length &&
+          daysOffer.map((dO) => (
+            <div key={dO.name}>
+              <ProductLineItemsDaysOffer
+                image={dO.image}
+                name={dO.name}
+                newPrice={dO.newPrice}
+                rating={dO.rating}
+              />
+            </div>
+          ))}
+      </div>
     </div>
   );
 }
