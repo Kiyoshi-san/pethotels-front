@@ -1,22 +1,28 @@
 .top-header-menu-container {
+    position: absolute;
     display: flex;
+    width: 100%;
+    align-items: center;
     background: rgba(0,0,0,0.7);
     color: map-get(map-get($foundation-palette, primary), second);
-    padding: rem-calc(10 50);
-    align-items: center;
-    .icon-logo {
+    z-index: 1;
+    .logo {
+        padding: rem-calc(5 0);
         display: flex;
-        align-items: center;
-        flex: 0 0 18%;
-        cursor: pointer;
-        color: map-get(map-get($foundation-palette, primary), second);
-        &:before {
-            font-size: rem-calc(80);
+        flex: 0 0 20%;
+        padding-left: rem-calc(10);
+        .icon-logo {
+            align-items: center;
+            cursor: pointer;
+            color: map-get(map-get($foundation-palette, primary), second);
+            &:before {
+                font-size: rem-calc(80);
+            }
         }
     }
     .cta-icons {
         display: flex;
-        flex: 0 0 22%;
+        flex: 0 0 25%;
         align-items: center;
         justify-content: flex-end;
         .icon {
@@ -40,15 +46,18 @@
         }
         .top-header-menu--my-account {
             display: flex;
+            background-color: rgba(190, 174, 88, 0.5);
+            height: rem-calc(90);
+            margin: rem-calc(0 10);
             justify-content: center;
             align-items: center;
             flex: 0 0 40%;
             cursor: pointer;
-            span {
-            transition: all 0.3s;
             &:hover {
-                color: map-get(map-get($foundation-palette, primary), first);
-                }
+                opacity: 0.8;
+            }
+            span {
+                transition: all 0.3s;
             }
         }
     }
@@ -57,7 +66,8 @@
 // MOBILE
 @media(max-width: map-get($breakpoints, medium)) {
     .top-header-menu-container {
-        padding: rem-calc(10 5);
+        position: relative;
+        background: rgb(0,0,0);
         .icon-logo {
             &:before {
                 font-size: rem-calc(60);

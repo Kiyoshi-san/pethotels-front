@@ -4,6 +4,9 @@
 
 body {
     @include Poppins(normal);
+    #root {
+        position: relative;
+    }
 }
 
 .body-container {

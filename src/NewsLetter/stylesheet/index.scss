@@ -1,0 +1,67 @@
+.news-letter-container {
+    background-color: map-get(map-get($foundation-palette, secondary), fifth);
+    margin: rem-calc(100 0 0);
+    .news-letter-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        .title {
+            color: map-get(map-get($foundation-palette, primary), third);
+            margin: rem-calc(20);
+            h2 {
+                @include Poppins(800);
+                font-size: rem-calc(18);
+                text-transform: uppercase;
+            }
+        }
+        .email-container {
+            background-color: map-get(map-get($foundation-palette, primary), second);
+            margin-left: rem-calc(20);
+            margin: rem-calc(20);
+            height: rem-calc(49);
+            form {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                .input {
+                    display: grid;
+                    grid-template-columns: 1fr 5fr;
+                    .icon-email {
+                        margin: rem-calc(10);
+                        display: flex;
+                        align-items: center;
+                        &:before {
+                            color: map-get(map-get($foundation-palette, secondary), sixth);
+                            font-size: rem-calc(24);
+                        }
+                    }
+                    input {
+                        @include Poppins(400);
+                        font-size: rem-calc(16);
+                        border: none;
+                        padding: rem-calc(15 10);
+                        outline: none;
+                    }
+                }
+                button {
+                    @include Poppins(800);
+                    position: relative;
+                    border: none;
+                    background-color: map-get(map-get($foundation-palette, primary), third);
+                    color: map-get(map-get($foundation-palette, primary), second);
+                    padding: rem-calc(15 20);
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: map-get($breakpoints, medium)) {
+    .news-letter-container {
+        padding-bottom: rem-calc(70);
+    }    
+}

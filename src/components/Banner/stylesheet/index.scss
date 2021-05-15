@@ -112,6 +112,9 @@ $bannerHeight: 700px;
                 }
             }
         }
+        .react-multi-carousel-dot-list {
+            bottom: rem-calc(60);
+        }
     }
 
     @keyframes animate-title {

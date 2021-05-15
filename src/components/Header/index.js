@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div className="top-header-menu-container">
-      <Link to={"/"}>
-        <i className="icon icon-logo"></i>
-      </Link>
+      <div className="logo">
+        <Link to={"/"}>
+          <i className="icon icon-logo"></i>
+        </Link>
+      </div>
       <Search />
       <div className="cta-icons">
         <i className="icon icon-heart-empty"></i>
