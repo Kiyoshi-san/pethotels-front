@@ -67,7 +67,7 @@
 @media(max-width: map-get($breakpoints, medium)) {
     .top-header-menu-container {
         position: relative;
-        background: rgb(0,0,0);
+        background: map-get(map-get($foundation-palette, primary), fifth);
         .icon-logo {
             &:before {
                 font-size: rem-calc(60);
