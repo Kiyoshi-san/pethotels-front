@@ -29,6 +29,13 @@
                 color: map-get(map-get($foundation-palette, primary), second);
                 transition: all 0.3s;
             }
+            &-heart-empty {
+                &:hover {
+                    &:before {
+                        color: map-get(map-get($foundation-palette, primary), first);
+                    }
+                }
+            }
             &-cart {
                 &:before {
                     font-size: rem-calc(40);
