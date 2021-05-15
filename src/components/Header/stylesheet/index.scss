@@ -30,14 +30,14 @@
                 }
             }
             &:before {
-                font-size: rem-calc(35);
+                font-size: rem-calc(30);
                 color: map-get(map-get($foundation-palette, primary), second);
                 transition: all 0.3s;
             }
             &-cart {
                 &:before {
-                    font-size: rem-calc(45);
-                    margin-top: rem-calc(-10);
+                    font-size: rem-calc(40);
+                    margin-top: rem-calc(-5);
                 }
             }
         }
@@ -98,6 +98,7 @@
             margin-left: auto;
             .icon {
                 &-cart {
+                    margin-right: rem-calc(10);
                     &:before {
                         font-size: rem-calc(30);
                     }
