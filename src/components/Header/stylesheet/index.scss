@@ -15,9 +15,6 @@
             align-items: center;
             cursor: pointer;
             color: map-get(map-get($foundation-palette, primary), second);
-            &:before {
-                font-size: rem-calc(80);
-            }
         }
     }
     .cta-icons {
@@ -64,32 +61,51 @@
 }
 
 // MOBILE
+@media(min-width: map-get($breakpoints, medium)) {
+    .top-header-menu-container {
+        .icon-logo {
+            &:before {
+                font-size: rem-calc(80);
+            }
+        }
+    }
+}
+
+// MOBILE
 @media(max-width: map-get($breakpoints, medium)) {
     .top-header-menu-container {
         position: relative;
         background: map-get(map-get($foundation-palette, primary), fifth);
+        .icon-menu {
+            flex: 0 0 15%;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:before {
+                font-size: rem-calc(25);
+            }
+            &:hover {
+                opacity: 0.8;
+                color: map-get(map-get($foundation-palette, primary), first);
+            }
+        }
         .icon-logo {
             &:before {
-                font-size: rem-calc(60);
+                font-size: rem-calc(65);
             }
         }
         .cta-icons {
             margin-left: auto;
             .icon {
-                &-heart-empty {
-                    &:before {
-                        font-size: rem-calc(27);
-                    }
-                }
                 &-cart {
                     &:before {
-                        font-size: rem-calc(35);
+                        font-size: rem-calc(30);
                     }
                 }
                 &-profile {
                     margin-left: rem-calc(6);
                     &:before {
-                        font-size: rem-calc(32);
+                        font-size: rem-calc(27);
                     }
                 }
             }
