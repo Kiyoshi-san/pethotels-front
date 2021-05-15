@@ -63,5 +63,14 @@
 @media(max-width: map-get($breakpoints, medium)) {
     .news-letter-container {
         padding-bottom: rem-calc(70);
+        .news-letter-box {
+            .title {
+                margin: rem-calc(0 20);
+                text-align: center;
+            }
+            .email-container {
+                margin: rem-calc(0 20);
+            }
+        }
     }    
 }
