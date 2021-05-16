@@ -2,14 +2,12 @@
     background-color: map-get(map-get($foundation-palette, secondary), fifth);
     .menu-category-box {
         .categories {
-            .category-item {
-                a {
-                    text-decoration: none;
-                    span {
-                        transition: all 0.3s;
-                        &:hover {
-                            color: map-get(map-get($foundation-palette, primary), first);
-                        }
+            a {
+                text-decoration: none;
+                span {
+                    transition: all 0.3s;
+                    &:hover {
+                        color: map-get(map-get($foundation-palette, primary), first);
                     }
                 }
             }
