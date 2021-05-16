@@ -33,7 +33,8 @@ $foundation-palette: (
       second: #FFFFFF, //map-get(map-get($foundation-latam, 'primary'), 'second')
       third: #444444, //map-get(map-get($foundation-latam, 'primary'), 'third')
       fourth: #E12F2F, //map-get(map-get($foundation-latam, 'primary'), 'fourth')
-      fifth: #000000,
+      fifth: #202020,
+      sixth: #000000,
     ),
     secondary: (
       first: #AC0000, //map-get(map-get($foundation-latam, 'secondary'), 'first')

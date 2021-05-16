@@ -1,0 +1,29 @@
+.menu-category-container {
+    background-color: map-get(map-get($foundation-palette, secondary), fifth);
+    &.category-fixed {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .menu-category-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+        padding: rem-calc(20);
+        max-width: rem-calc($bodyContainerWidth);
+        margin: 0 auto;
+        .category-item {
+            display: flex;
+            justify-content: center;
+            a {
+                text-decoration: none;
+                span {
+                    @include Poppins(600);
+                    font-size: rem-calc(14);
+                    letter-spacing: rem-calc(-1);
+                    color: map-get(map-get($foundation-palette, primary), fifth);
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
