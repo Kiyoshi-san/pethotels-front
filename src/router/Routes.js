@@ -1,10 +1,11 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Header from "../components/Header/index";
+import Header from "../components/Header";
 import HomePage from "../pages/HomePage";
-import ProductList from "../pages/ProductList/index";
+import ProductDetail from "../pages/ProductDetail";
+import ProductList from "../pages/ProductList";
 import Footer from "../components/Footer";
-import NewsLetter from "../NewsLetter";
+import NewsLetter from "../components/NewsLetter";
 
 const Routes = () => {
   return (
@@ -14,6 +15,11 @@ const Routes = () => {
         <Switch>
           <Route path="/" component={HomePage} exact></Route>
           <Route path="/products" component={ProductList} exact></Route>
+          <Route
+            path="/product/:brand/:name/:id"
+            component={ProductDetail}
+            exact
+          ></Route>
         </Switch>
       </main>
       <NewsLetter />

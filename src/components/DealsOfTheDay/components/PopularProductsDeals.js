@@ -15,8 +15,10 @@ export default function PopularProductsDeals(props) {
           daysOffer.map((dO) => (
             <div key={dO.name}>
               <ProductLineItemsDaysOffer
+                productId={dO._id}
                 image={dO.image}
                 name={dO.name}
+                category={dO.category}
                 newPrice={dO.newPrice}
                 rating={dO.rating}
               />

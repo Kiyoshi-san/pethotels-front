@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import ProductTileDescription from "../ProductTile/components/ProductTileDescription";
 import Carousel from "react-multi-carousel";
 import ButtonHoverEffect from "../Button/ButtonHoverEffect";
@@ -90,10 +91,16 @@ export default function ProductTileHome(props) {
                   </div>
                 </div>
                 <div className="image-box">
-                  <img src={prod.image} alt="brinquedo-de-cachorro" />
+                  <Link
+                    to={`product/${prod.category}/${prod.name}/${prod._id}`}
+                  >
+                    <img src={prod.image} alt="brinquedo-de-cachorro" />
+                  </Link>
                 </div>
                 <ProductTileDescription
+                  productId={prod._id}
                   name={prod.name}
+                  category={prod.category}
                   oldPrice={prod.oldPrice}
                   newPrice={prod.newPrice}
                   rating={prod.rating}
