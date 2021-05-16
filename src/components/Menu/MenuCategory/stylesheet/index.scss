@@ -66,8 +66,10 @@
             height: 100%;
             transform: translate(-100%, 0px);
             transition: all 0.3s;
-            &.menuCategoryMobile {
+            &.menu-category-mobile {
                 transform: translate(0, 0px);
+                padding: 20px 15px 0;
+                overflow-y: auto;
             }
             .icon-close {
                 display: block;
@@ -78,6 +80,7 @@
                 .category-item {
                     padding: rem-calc(10);
                     width: rem-calc(170);
+                    border-bottom: solid rem-calc(2) map-get(map-get($foundation-palette, secondary), sixth);
                     a {
                         span {
                             @include Poppins(600);

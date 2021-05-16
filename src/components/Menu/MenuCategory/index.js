@@ -36,7 +36,7 @@ export default function MenuCategory() {
   });
 
   const menuCategoryMobile = () => {
-    setCategoryMenuMobile("menuCategoryMobile");
+    setCategoryMenuMobile("menu-category-mobile");
     setMenuIcon("menu-icon--opacity-0");
   };
 
