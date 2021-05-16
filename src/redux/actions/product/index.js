@@ -7,6 +7,9 @@ import {
   PRODUCT_OFFERS_REQUEST,
   PRODUCT_OFFERS_SUCCESS,
   PRODUCT_OFFERS_FAIL,
+  PRODUCT_DETAIL_REQUEST,
+  PRODUCT_DETAIL_SUCCESS,
+  PRODUCT_DETAIL_FAIL,
 } from "./constants";
 
 export const listProducts =
@@ -43,5 +46,18 @@ export const listProductOffers = () => async (dispatch, getState) => {
     dispatch({ type: PRODUCT_OFFERS_SUCCESS, payload: data });
   } catch (err) {
     dispatch({ type: PRODUCT_OFFERS_FAIL, payload: err.message });
+  }
+};
+
+export const detailProduct = (id) => async (dispatch, getState) => {
+  dispatch({ type: PRODUCT_DETAIL_REQUEST });
+  try {
+    const { data } = await Axios.get(`/api/products/${id}`);
+    dispatch({ type: PRODUCT_DETAIL_SUCCESS, payload: data });
+  } catch (error) {
+    const message = error.response?.data.message
+      ? error.response.data.message
+      : error.message;
+    dispatch({ type: PRODUCT_DETAIL_FAIL, payload: message });
   }
 };

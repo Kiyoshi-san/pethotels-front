@@ -94,7 +94,7 @@ export default function ProductTileHome(props) {
                   <Link
                     to={`product/${prod.category}/${prod.name}/${prod._id}`}
                   >
-                    <img src={prod.image} alt="brinquedo-de-cachorro" />
+                    <img src={prod.image[0]} alt="brinquedo-de-cachorro" />
                   </Link>
                 </div>
                 <ProductTileDescription

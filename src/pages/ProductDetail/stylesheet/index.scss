@@ -1,8 +1,10 @@
 .product-detail-page-container {
-    .product-dtail-page-carousel-image-zoom {
-        img.thumbnail-carousel-zoom {
-            border: solid 2px red;
-            display: none;
-        }
+    background-color: map-get(map-get($foundation-palette, secondary), fourth);
+    .body-row-container {
+        padding: rem-calc(50 0);
+    }
+    .product-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
 }

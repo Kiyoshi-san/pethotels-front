@@ -1,0 +1,91 @@
+.product-detail-info-container {
+    background-color: map-get(map-get($foundation-palette, primary), second);
+    padding: rem-calc(20);
+    span {
+        @include Poppins(400);
+        color: map-get(map-get($foundation-palette, primary), third);
+        font-size: rem-calc(13)
+    }
+    .title-container {
+        h3 {
+            @include Poppins(800);
+            font-size: rem-calc(24);
+            color: map-get(map-get($foundation-palette, primary), third);
+        }
+    }
+    .rating-stars {
+        text-align: initial;
+        margin-bottom: rem-calc(20);
+        .icon-star {
+            font-size: rem-calc(13);
+        }
+    }
+    .in-stock {
+        margin-bottom: rem-calc(20);
+        .icon-ok {
+            color: map-get(map-get($foundation-palette, secondary), eighth);
+        }
+    }
+    .sku {
+        margin-bottom: rem-calc(20);
+    }
+    .price {
+        margin-bottom: rem-calc(20);
+        margin: rem-calc(0 0 10 0);
+        h3 {
+            @include Poppins(800);
+            font-size: rem-calc(14);
+            color: map-get(map-get($foundation-palette, primary), third);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .old-price {
+            @include Poppins(400);
+            text-decoration: line-through;
+            font-size: rem-calc(12);
+            color: map-get(map-get($foundation-palette, secondary), sixth);
+            margin-right: rem-calc(10);
+        }
+        .new-price {
+            @include Poppins(400);
+            font-size: rem-calc(18);
+            color: map-get(map-get($foundation-palette, primary), fourth);
+        }
+    }
+    .description-container {
+        display: flex;
+        margin-bottom: rem-calc(20);
+        .description-box {
+            width: 80%;
+            .title {
+                h2 {
+                    @include Poppins(800);
+                    font-size: rem-calc(16);
+                    color: map-get(map-get($foundation-palette, primary), third);
+                }
+            }
+            .description {
+                span {
+                    overflow: hidden;
+                    display: block;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+        .see-more {
+            @include Poppins(800);
+            font-size: rem-calc(13);
+            letter-spacing: rem-calc(-1);
+            display: flex;
+            align-items: flex-end;
+            a {
+                color: map-get(map-get($foundation-palette, primary), third);
+            }
+        }
+    }
+}

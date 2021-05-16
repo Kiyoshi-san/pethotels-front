@@ -1,5 +1,6 @@
 // PAGES
 @import "../../../pages/HomePage/stylesheet";
+@import "../../../pages/ProductDetail/stylesheet";
 
 // COMPONENTS
 @import "../../../components/Button/stylesheet";
@@ -25,4 +26,7 @@
 @import "../../../components/Footer/stylesheet";
 @import "../../../components/NewsLetter/stylesheet";
 @import "../../../components/Menu/MenuCategory/stylesheet";
-@import "../../../pages/ProductDetail/stylesheet";
+@import "../../../pages/ProductDetail/ProductDetailImage/stylesheet";
+@import "../../../components/Banner/BannerPage/stylesheet";
+@import "../../../pages/ProductDetail/ProductDetailInfo/stylesheet";
+@import "../../../pages/ProductDetail/AddToCartPdpForm/stylesheet";

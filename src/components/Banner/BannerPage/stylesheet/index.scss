@@ -1,0 +1,29 @@
+.banner-page-container {
+    position: relative;
+    .banner-page-title {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        h3 {
+            @include Poppins(800);
+            font-size: rem-calc(30);
+            color: map-get(map-get($foundation-palette, primary), second);
+            text-transform: uppercase;
+            letter-spacing: rem-calc(-1);
+        }
+    }
+    .banner-page-img {
+        max-height: rem-calc(200);
+        overflow: hidden;
+        z-index: 0;
+        img {
+            width: 100%;
+            margin-top: -26%;
+            filter: brightness(0.4);
+        }
+    }
+}

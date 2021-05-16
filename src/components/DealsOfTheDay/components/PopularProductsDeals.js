@@ -16,7 +16,7 @@ export default function PopularProductsDeals(props) {
             <div key={dO.name}>
               <ProductLineItemsDaysOffer
                 productId={dO._id}
-                image={dO.image}
+                image={dO.image[0]}
                 name={dO.name}
                 category={dO.category}
                 newPrice={dO.newPrice}

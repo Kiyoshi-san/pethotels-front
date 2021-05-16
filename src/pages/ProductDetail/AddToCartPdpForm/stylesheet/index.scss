@@ -1,0 +1,39 @@
+.add-to-cart-pdp-form {
+    form {
+        display: flex;
+        .input-qty {
+            display: flex;
+            margin-right: rem-calc(20);
+            input[type='number'] {
+                @include Poppins(400);
+                font-size: rem-calc(18);
+                padding: rem-calc(8);
+                width: rem-calc(30);
+                -moz-appearance:textfield;
+                border: solid 1px map-get(map-get($foundation-palette, secondary), sixth);
+                border-right: none;
+
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+            }
+            .increment-buttons {
+                display: flex;
+                flex-direction: column;
+                input[type="button"] {
+                    -webkit-appearance: button;
+                    cursor: pointer;
+                    border: solid 1px map-get(map-get($foundation-palette, secondary), sixth);
+                    border-radius: 0;
+                    padding: rem-calc(2 6);
+                }
+            }
+        }
+        .button-add {
+            button[type="submit"] {
+                font-size: rem-calc(17);
+            }
+        }
+    }
+}

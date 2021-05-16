@@ -106,7 +106,7 @@
             text-align: center;
             cursor: pointer;
             transition: all 0.3s;
-            z-index: 1;
+            z-index: 3;
             &:before {
                 font-size: rem-calc(25);
                 color: map-get(map-get($foundation-palette, primary), second);
