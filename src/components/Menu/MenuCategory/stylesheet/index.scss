@@ -84,14 +84,15 @@
                     padding: rem-calc(10);
                     width: rem-calc(170);
                     border-bottom: solid rem-calc(2) map-get(map-get($foundation-palette, secondary), sixth);
-                    a {
-                        span {
-                            @include Poppins(600);
-                            font-size: rem-calc(14);
-                            letter-spacing: rem-calc(-1);
-                            color: map-get(map-get($foundation-palette, primary), fifth);
-                            text-transform: uppercase;
-                        }
+                }
+                a {
+                    text-decoration: none;
+                    span {
+                        @include Poppins(600);
+                        font-size: rem-calc(14);
+                        letter-spacing: rem-calc(-1);
+                        color: map-get(map-get($foundation-palette, primary), fifth);
+                        text-transform: uppercase;
                     }
                 }
             }
