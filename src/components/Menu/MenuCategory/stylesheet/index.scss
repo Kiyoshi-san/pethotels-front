@@ -32,8 +32,25 @@
                 max-width: rem-calc($bodyContainerWidth);
                 margin: 0 auto;
                 .category-item {
+                    position: relative;
                     display: flex;
                     justify-content: center;
+                    .underline {
+                        position: absolute;
+                        width: 100%;
+                        height: rem-calc(2);
+                        bottom: rem-calc(-6);
+                        background: linear-gradient(to left, rgba(0,0,0,0) 50%, map-get(map-get($foundation-palette, primary), first) 50%) right;
+                        background-size: 201%;
+                        transition: 0.3s all;
+                    }
+                    &:hover {
+                        .underline {
+                            transform: scaleX(1);
+                            background-position: left;
+                        }
+                    }
+                    transition: 0.3s all;
                     a {
                         span {
                             @include Poppins(600);

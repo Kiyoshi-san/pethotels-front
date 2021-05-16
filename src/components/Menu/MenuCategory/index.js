@@ -60,6 +60,7 @@ export default function MenuCategory() {
               <Link to={`${cat.categoryId}`}>
                 <span>{cat.name}</span>
               </Link>
+              <div className="underline"></div>
             </div>
           ))}
         </div>
