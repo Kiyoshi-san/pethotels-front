@@ -7,6 +7,9 @@ export default function MenuCategory() {
   const categoryList = useSelector((state) => state.categoriesList);
   const { categories } = categoryList;
   const [categoryPosFixed, setCategoryPosFixed] = useState("");
+  const [categoryMenuMobile, setCategoryMenuMobile] = useState("");
+  const [menuIcon, setMenuIcon] = useState("");
+  const [closeIcon, setCloseIcon] = useState("");
 
   const categoriesRoot = categories?.filter((obj) => {
     return obj.parentCategoryId === "root";
@@ -15,9 +18,6 @@ export default function MenuCategory() {
   const dispatch = useDispatch(listCategories());
   useEffect(() => {
     dispatch(listCategories());
-    console.log("aaa");
-    console.log(categoriesRoot);
-    console.log("aaa");
   }, []);
 
   /* const headerHeight = document.querySelectorAll(
@@ -35,17 +35,38 @@ export default function MenuCategory() {
     });
   });
 
+  const menuCategoryMobile = () => {
+    setCategoryMenuMobile("menuCategoryMobile");
+    setMenuIcon("menu-icon--opacity-0");
+  };
+
+  const closeCategoryMenu = () => {
+    setCategoryMenuMobile("");
+    setMenuIcon("");
+  };
+
   return (
     <div className={`menu-category-container ${categoryPosFixed}`}>
-      <div className="menu-category-box">
-        <i className="icon icon-menu show-for-small-only"></i>
-        {categoriesRoot?.map((cat) => (
-          <div className="category-item" key={`${cat.name}${cat.categoryId}`}>
-            <Link to={`${cat.categoryId}`}>
-              <span>{cat.name}</span>
-            </Link>
-          </div>
-        ))}
+      <i
+        className={`icon icon-menu show-for-small-only ${menuIcon}`}
+        onClick={() => {
+          menuCategoryMobile();
+        }}
+      ></i>
+      <div className={`menu-category-box ${categoryMenuMobile}`}>
+        <div className="categories">
+          {categoriesRoot?.map((cat) => (
+            <div className="category-item" key={`${cat.name}${cat.categoryId}`}>
+              <Link to={`${cat.categoryId}`}>
+                <span>{cat.name}</span>
+              </Link>
+            </div>
+          ))}
+        </div>
+        <i
+          className={`icon icon-close ${closeIcon}`}
+          onClick={closeCategoryMenu}
+        ></i>
       </div>
     </div>
   );

@@ -90,22 +90,12 @@
         .top-header-menu-box {
             position: relative;
             background: map-get(map-get($foundation-palette, primary), fifth);
-            .icon-menu {
-                flex: 0 0 15%;
-                text-align: center;
-                cursor: pointer;
-                transition: all 0.3s;
-                &:before {
-                    font-size: rem-calc(25);
-                }
-                &:hover {
-                    opacity: 0.8;
-                    color: map-get(map-get($foundation-palette, primary), first);
-                }
-            }
-            .icon-logo {
-                &:before {
-                    font-size: rem-calc(65);
+            .logo {
+                margin: 0 auto;                
+                .icon-logo {
+                    &:before {
+                        font-size: rem-calc(65);
+                    }
                 }
             }
             .cta-icons {
