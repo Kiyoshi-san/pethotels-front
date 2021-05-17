@@ -52,8 +52,18 @@
                 }
             }
             .top-header-menu--my-account {
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: map-get(map-get($foundation-palette, primary), first);
+                    opacity: 0.6;
+                }
+                position: relative;
                 display: flex;
-                background-color: rgba(190, 174, 88, 0.5);
                 height: rem-calc(90);
                 margin: rem-calc(0 10);
                 justify-content: center;
@@ -63,8 +73,11 @@
                 &:hover {
                     opacity: 0.8;
                 }
-                span {
-                    transition: all 0.3s;
+                .title {
+                    z-index: 1;
+                    span {
+                        transition: all 0.3s;
+                    }
                 }
             }
         }

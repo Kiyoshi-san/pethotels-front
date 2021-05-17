@@ -16,8 +16,10 @@ export default function Header() {
         <div className="cta-icons">
           <i className="icon icon-heart-empty hide-for-small-only"></i>
           <div className="top-header-menu--my-account">
-            <span className="hide-for-small-only">Minha conta</span>
-            <i className="icon icon-profile show-for-small-only"></i>
+            <div className="title">
+              <span className="hide-for-small-only">Minha conta</span>
+              <i className="icon icon-profile show-for-small-only"></i>
+            </div>
           </div>
           <i className="icon icon-cart"></i>
         </div>
