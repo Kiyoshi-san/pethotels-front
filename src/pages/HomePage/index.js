@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { listProducts } from "../../redux/actions/product";
 import Banner from "../../components/Banner";
 import DealsOfTheDay from "../../components/DealsOfTheDay";
 import ProductCarousel from "../../components/ProductCarousel";
@@ -43,7 +42,7 @@ export default function HomePage() {
       </div>
       <div className="body-row-container bg-white">
         <div className="body-row">
-          <ProductCarousel title="Produtos Relacionados" />
+          <ProductCarousel products={data} title="Produtos Relacionados" />
         </div>
       </div>
       <div className="body-row-container bg-white">
@@ -53,7 +52,7 @@ export default function HomePage() {
       </div>
       <div className="body-row-container bg-white">
         <div className="body-row">
-          <ProductCarousel title="Produtos Relacionados" />
+          <ProductCarousel products={data} title="Produtos Relacionados" />
         </div>
       </div>
     </div>

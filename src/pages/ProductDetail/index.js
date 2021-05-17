@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { detailProduct } from "../../redux/actions/product";
+import { detailProduct, listProductOffers } from "../../redux/actions/product";
 import { useDispatch, useSelector } from "react-redux";
 import ProductDetailImage from "./ProductDetailImage";
 import BannerPage from "../../components/Banner/BannerPage";
@@ -8,6 +8,14 @@ import ProductDetailInfo from "./ProductDetailInfo";
 import ProductCarousel from "../../components/ProductCarousel";
 
 export default function Banner(props) {
+  const dispatch = useDispatch();
+
+  const productOffers = useSelector((state) => state.productOffers);
+  const { loading, data, error } = productOffers;
+  useEffect(() => {
+    dispatch(listProductOffers());
+  }, [dispatch, listProductOffers.length]);
+
   const productDetailList = useSelector((state) => state.productDetail);
   const { productDetail } = productDetailList;
 
@@ -16,11 +24,9 @@ export default function Banner(props) {
       params: { id },
     },
   } = props;
-
-  const dispatch = useDispatch();
   useEffect(() => {
     dispatch(detailProduct(id));
-  }, []);
+  }, [dispatch, detailProduct.length]);
 
   return (
     <div className="product-detail-page-container">
@@ -36,7 +42,7 @@ export default function Banner(props) {
 
       <div className="body-row-container bg-gray">
         <div className="body-row">
-          <ProductCarousel title="Produtos Relacionados" />
+          <ProductCarousel products={data} title="Produtos Relacionados" />
         </div>
       </div>
     </div>
