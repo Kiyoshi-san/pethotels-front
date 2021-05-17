@@ -5,7 +5,7 @@ export default function ProductInfo(props) {
   const [activeTab, setActiveTab] = useState(1);
 
   const activeTabHandler = (tabIndex) => {
-    setActiveTab(tabIndex);
+    activeTab !== tabIndex ? setActiveTab(tabIndex) : setActiveTab("");
   };
 
   return (
