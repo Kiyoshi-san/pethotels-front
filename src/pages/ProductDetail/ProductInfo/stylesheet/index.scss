@@ -81,8 +81,9 @@
                     color: map-get(map-get($foundation-palette, primary), second);
                 }
                 &+.body-container {
-                    max-height: 500px;
-            padding: rem-calc(10 20);
+                    max-height: rem-calc(500);
+                    padding: rem-calc(10 20);
+                    overflow-y: auto;
                 }
             }
         }
