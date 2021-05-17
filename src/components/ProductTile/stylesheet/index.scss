@@ -1,5 +1,6 @@
 .product-tile {
     border: solid rem-calc(1) map-get(map-get($foundation-palette, secondary), fifth);
+    background-color: map-get(map-get($foundation-palette, primary), second);
     width: rem-calc(268);
     .image-product-container {
         display: flex;

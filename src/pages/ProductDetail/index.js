@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ProductDetailImage from "./ProductDetailImage";
 import BannerPage from "../../components/Banner/BannerPage";
 import ProductDetailInfo from "./ProductDetailInfo";
+import ProductCarousel from "../../components/ProductCarousel";
 
 export default function Banner(props) {
   const productDetailList = useSelector((state) => state.productDetail);
@@ -30,6 +31,12 @@ export default function Banner(props) {
             <ProductDetailImage productDetail={productDetail} />
             <ProductDetailInfo productDetail={productDetail} />
           </div>
+        </div>
+      </div>
+
+      <div className="body-row-container bg-gray">
+        <div className="body-row">
+          <ProductCarousel title="Produtos Relacionados" />
         </div>
       </div>
     </div>

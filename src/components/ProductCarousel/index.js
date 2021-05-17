@@ -1,11 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Carousel from "react-multi-carousel";
 import ButtonHoverEffect from "../Button/ButtonHoverEffect";
 import ProductTile from "../ProductTile";
 import TitleColor from "../TitleColor";
+import { listProductOffers } from "../../redux/actions/product";
 
 export default function ProductCarousel(props) {
-  const { products, title } = props;
+  const { title } = props;
+
+  const products = useSelector((state) => state.productOffers);
+  const { loading, data, error } = products;
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(listProductOffers());
+  }, [dispatch]);
 
   const responsive = {
     superLargeDesktop: {
@@ -63,7 +73,7 @@ export default function ProductCarousel(props) {
   return (
     <div className="product-carousel">
       <TitleColor title={title} />
-      {products?.length && (
+      {data?.length && (
         <Carousel
           containerClass="product-tile-home-container"
           itemClass="carousel-item-height"
@@ -84,7 +94,7 @@ export default function ProductCarousel(props) {
           customRightArrow={<CustomRightArrow />}
           customLeftArrow={<CustomLeftArrow />}
         >
-          {products?.map((prd) => (
+          {data?.map((prd) => (
             <ProductTile product={prd} />
           ))}
         </Carousel>

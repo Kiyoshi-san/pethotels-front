@@ -42,7 +42,7 @@ export const listProductOffers = () => async (dispatch, getState) => {
     type: PRODUCT_OFFERS_REQUEST,
   });
   try {
-    const { data } = await Axios.get(`api/products/productoffer`);
+    const { data } = await Axios.get(`/api/products/productoffer`);
     dispatch({ type: PRODUCT_OFFERS_SUCCESS, payload: data });
   } catch (err) {
     dispatch({ type: PRODUCT_OFFERS_FAIL, payload: err.message });

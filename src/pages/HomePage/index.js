@@ -43,7 +43,7 @@ export default function HomePage() {
       </div>
       <div className="body-row-container bg-white">
         <div className="body-row">
-          <ProductCarousel products={data} title="Produtos Relacionados" />
+          <ProductCarousel title="Produtos Relacionados" />
         </div>
       </div>
       <div className="body-row-container bg-white">
@@ -53,7 +53,7 @@ export default function HomePage() {
       </div>
       <div className="body-row-container bg-white">
         <div className="body-row">
-          <ProductCarousel products={data} title="Produtos Relacionados" />
+          <ProductCarousel title="Produtos Relacionados" />
         </div>
       </div>
     </div>
