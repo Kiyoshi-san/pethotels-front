@@ -6,6 +6,7 @@ import ProductDetailImage from "./ProductDetailImage";
 import BannerPage from "../../components/Banner/BannerPage";
 import ProductDetailInfo from "./ProductDetailInfo";
 import ProductCarousel from "../../components/ProductCarousel";
+import ProductInfo from "./ProductInfo";
 
 export default function Banner(props) {
   const dispatch = useDispatch();
@@ -33,15 +34,13 @@ export default function Banner(props) {
       <BannerPage title="shop" />
       <div className="body-row-container bg-gray">
         <div className="body-row">
-          <div className="product-info">
+          <div className="product-detail-info">
             <ProductDetailImage productDetail={productDetail} />
             <ProductDetailInfo productDetail={productDetail} />
           </div>
-        </div>
-      </div>
 
-      <div className="body-row-container bg-gray">
-        <div className="body-row">
+          <ProductInfo productDetail={productDetail} />
+
           <ProductCarousel products={data} title="Produtos Relacionados" />
         </div>
       </div>

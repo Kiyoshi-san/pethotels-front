@@ -3,8 +3,30 @@
     .body-row-container {
         padding: rem-calc(50 0);
     }
-    .product-info {
+    .product-detail-info {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        .product-detail-carousel {
+            .carousel-slider {
+                .slider-wrapper {
+                    ul {
+                        li {
+                            .product-detail-page-carousel-image-zoom {
+                                .input-position {
+                                    &>div {
+                                        display: flex;
+                                        justify-content: center;
+                                        &>img {
+                                            max-height: rem-calc(300);
+                                            width: auto !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

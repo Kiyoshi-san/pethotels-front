@@ -10,8 +10,12 @@ export default function ProductTileDescription(props) {
         <h3 className="title">{name}</h3>
       </Link>
       <div className="price">
-        {oldPrice && <span className="old-price">R$ {oldPrice}</span>}
-        {newPrice && <span className="new-price">R$ {newPrice}</span>}
+        {oldPrice && (
+          <span className="old-price">R$ {oldPrice.toFixed(2)}</span>
+        )}
+        {newPrice && (
+          <span className="new-price">R$ {newPrice.toFixed(2)}</span>
+        )}
       </div>
       <RatingStars rating={rating}></RatingStars>
     </div>

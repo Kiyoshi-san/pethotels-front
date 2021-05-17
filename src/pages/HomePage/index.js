@@ -52,7 +52,7 @@ export default function HomePage() {
       </div>
       <div className="body-row-container bg-white">
         <div className="body-row">
-          <ProductCarousel products={data} title="Produtos Relacionados" />
+          <ProductCarousel products={data} title="Mais Vendidos" />
         </div>
       </div>
     </div>

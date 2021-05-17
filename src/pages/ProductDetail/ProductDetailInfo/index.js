@@ -28,10 +28,14 @@ export default function ProductDetailInfo(props) {
       </div>
       <div className="price">
         {productDetail?.oldPrice && (
-          <span className="old-price">R$ {productDetail?.oldPrice}</span>
+          <span className="old-price">
+            R$ {productDetail?.oldPrice.toFixed(2)}
+          </span>
         )}
         {productDetail?.newPrice && (
-          <span className="new-price">R$ {productDetail?.newPrice}</span>
+          <span className="new-price">
+            R$ {productDetail?.newPrice.toFixed(2)}
+          </span>
         )}
       </div>
       <div className="description-container">

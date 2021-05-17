@@ -1,6 +1,6 @@
 .product-detail-carousel {
     background-color: map-get(map-get($foundation-palette, primary), second);
-    padding: rem-calc(50);
+    padding: rem-calc(50 0 0);
     .carousel-slider {
         .control-dots {
             display: none;
