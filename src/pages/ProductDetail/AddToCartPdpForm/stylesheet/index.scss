@@ -32,7 +32,9 @@
         }
         .button-add {
             button[type="submit"] {
+                @include Poppins(400);
                 font-size: rem-calc(17);
+                text-transform: uppercase;
             }
         }
     }
