@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import RatingStars from "../../../components/ProductTile/components/RatingStars";
 import { listProductOffers } from "../../../redux/actions/product";
 import ProductTile from "../../../components/ProductTile";
+import { Link } from "react-router-dom";
 
 export default function ProductInfo(props) {
   const { productDetail } = props;
@@ -72,7 +73,9 @@ export default function ProductInfo(props) {
             </div>
           ) : activeTab == 2 ? (
             <div className="tag-category-container">
-              <div className="tag">{productDetail?.categoryName}</div>
+              <Link to={productDetail?.categoryName}>
+                <div className="tag">{productDetail?.categoryName}</div>
+              </Link>
             </div>
           ) : activeTab == 3 ? (
             <div className="review-product-container">
@@ -135,7 +138,9 @@ export default function ProductInfo(props) {
           </div>
           <div className="body-container">
             <div className="tag-category-container">
-              <div className="tag">{productDetail?.categoryName}</div>
+              <Link to={productDetail?.categoryName}>
+                <div className="tag">{productDetail?.categoryName}</div>
+              </Link>
             </div>
           </div>
         </div>
