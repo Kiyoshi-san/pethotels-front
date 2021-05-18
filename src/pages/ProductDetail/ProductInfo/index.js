@@ -73,7 +73,7 @@ export default function ProductInfo(props) {
             </div>
           ) : activeTab == 2 ? (
             <div className="tag-category-container">
-              <Link to={productDetail?.categoryName}>
+              <Link to={`/${productDetail?.categoryName}`}>
                 <div className="tag">{productDetail?.categoryName}</div>
               </Link>
             </div>
@@ -138,7 +138,7 @@ export default function ProductInfo(props) {
           </div>
           <div className="body-container">
             <div className="tag-category-container">
-              <Link to={productDetail?.categoryName}>
+              <Link to={`/${productDetail?.categoryName}`}>
                 <div className="tag">{productDetail?.categoryName}</div>
               </Link>
             </div>

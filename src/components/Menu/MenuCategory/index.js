@@ -56,7 +56,7 @@ export default function MenuCategory() {
       <div className={`menu-category-box ${categoryMenuMobile}`}>
         <div className="categories">
           {categoriesRoot?.map((cat) => (
-            <Link to={`${cat.categoryId}`}>
+            <Link to={`/${cat.categoryId}`}>
               <div
                 className="category-item click-underline-container"
                 key={`${cat.name}${cat.categoryId}`}

@@ -6,7 +6,7 @@ export default function ProductLineItemsDaysOffer(props) {
   const { productId, category, name, image, newPrice, rating } = props;
   return (
     <div className="product-line-items-days-offer">
-      <Link to={`product/${category}/${name}/${productId}`}>
+      <Link to={`/product/${category}/${name}/${productId}`}>
         <div className="image-container">
           <img src={image} alt={name} />
         </div>
