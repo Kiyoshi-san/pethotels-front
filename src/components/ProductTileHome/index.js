@@ -92,7 +92,7 @@ export default function ProductTileHome(props) {
                 </div>
                 <div className="image-box">
                   <Link
-                    to={`product/${prod.category}/${prod.name}/${prod._id}`}
+                    to={`product/${prod.categoryName}/${prod.name}/${prod._id}`}
                   >
                     <img src={prod.image[0]} alt="brinquedo-de-cachorro" />
                   </Link>
