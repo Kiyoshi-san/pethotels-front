@@ -27,7 +27,7 @@ export default function Banner(props) {
   } = props;
   useEffect(() => {
     dispatch(detailProduct(id));
-  }, [dispatch, detailProduct.length]);
+  }, [dispatch, detailProduct[0]?._id]);
 
   return (
     <div className="product-detail-page-container">
