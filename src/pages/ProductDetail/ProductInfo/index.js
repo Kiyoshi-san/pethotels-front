@@ -1,8 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import RatingStars from "../../../components/ProductTile/components/RatingStars";
+import { listProductOffers } from "../../../redux/actions/product";
+import ProductTile from "../../../components/ProductTile";
 
 export default function ProductInfo(props) {
   const { productDetail } = props;
   const [activeTab, setActiveTab] = useState(1);
+
+  const productOffers = useSelector((state) => state.productOffers);
+  const { data: productOffer } = productOffers;
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(listProductOffers());
+  }, []);
 
   const activeTabHandler = (tabIndex) => {
     activeTab !== tabIndex ? setActiveTab(tabIndex) : setActiveTab("");
@@ -53,19 +65,54 @@ export default function ProductInfo(props) {
             <h2>Mais produtos</h2>
           </div>
         </div>
-        <div className="product-info-body">
+        <div className="body-container">
           {activeTab == 1 ? (
             <div id="product-info" className="description-container">
-              {productDetail?.description}
+              <span>{productDetail?.description}</span>
             </div>
           ) : activeTab == 2 ? (
-            <div>asdf</div>
+            <div className="tag-category-container">
+              <div className="tag">{productDetail?.categoryName}</div>
+            </div>
           ) : activeTab == 3 ? (
-            <div>asdf2</div>
+            <div className="review-product-container">
+              {productDetail?.review ? (
+                productDetail.review.map((reviews) => (
+                  <div className="product-review-container">
+                    <div className="review-user-name">
+                      <span>{reviews?.user}</span>
+                    </div>
+                    <div className="review-message-name">
+                      <span>{reviews?.message}</span>
+                    </div>
+                    <RatingStars
+                      rating={reviews?.rating}
+                      numReviews={reviews?.numReviews}
+                    />
+                  </div>
+                ))
+              ) : (
+                <div>
+                  <h2>Ainda não há avaliações para este produto</h2>
+                </div>
+              )}
+            </div>
           ) : activeTab == 4 ? (
-            <div>asdf3</div>
+            <div className="seller-container">
+              <h2>{productDetail?.seller.seller.name}</h2>
+              <RatingStars
+                rating={productDetail?.seller.seller.rating}
+                numReviews={productDetail?.seller.seller.numReviews}
+              />
+            </div>
           ) : activeTab == 5 ? (
-            <div>asdf4</div>
+            <div className="more-products-container">
+              {productOffer?.map((prodOffer) => (
+                <div className="more-product-box">
+                  <ProductTile product={prodOffer} />
+                </div>
+              ))}
+            </div>
           ) : null}
         </div>
       </div>
@@ -77,9 +124,7 @@ export default function ProductInfo(props) {
           <div className={`label-tab ${activeTab == 1 ? "active" : ""}`}>
             <h2>Descrição</h2>
           </div>
-          <div id="product-info" className="body-container">
-            {productDetail?.description}
-          </div>
+          <div className="body-container">{productDetail?.description}</div>
         </div>
         <div
           className={`description-container`}
@@ -88,8 +133,11 @@ export default function ProductInfo(props) {
           <div className={`label-tab ${activeTab == 2 ? "active" : ""}`}>
             <h2>Tags</h2>
           </div>
-
-          <div className="body-container">asdf</div>
+          <div className="body-container">
+            <div className="tag-category-container">
+              <div className="tag">{productDetail?.categoryName}</div>
+            </div>
+          </div>
         </div>
         <div
           className={`description-container`}
@@ -98,7 +146,30 @@ export default function ProductInfo(props) {
           <div className={`label-tab ${activeTab == 3 ? "active" : ""}`}>
             <h2>Reviews</h2>
           </div>
-          <div className="body-container">asdf2</div>
+          <div className="body-container">
+            <div className="review-product-container">
+              {productDetail?.review ? (
+                productDetail.review.map((reviews) => (
+                  <div className="product-review-container">
+                    <div className="review-user-name">
+                      <span>{reviews?.user}</span>
+                    </div>
+                    <div className="review-message-name">
+                      <span>{reviews?.message}</span>
+                    </div>
+                    <RatingStars
+                      rating={reviews?.rating}
+                      numReviews={reviews?.numReviews}
+                    />
+                  </div>
+                ))
+              ) : (
+                <div>
+                  <h2>Ainda não há avaliações para este produto</h2>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
         <div
           className={`description-container`}
@@ -107,7 +178,15 @@ export default function ProductInfo(props) {
           <div className={`label-tab ${activeTab == 4 ? "active" : ""}`}>
             <h2>Vendedor</h2>
           </div>
-          <div className="body-container">asdf3</div>
+          <div className="body-container">
+            <div className="seller-container">
+              <h2>{productDetail?.seller.seller.name}</h2>
+              <RatingStars
+                rating={productDetail?.seller.seller.rating}
+                numReviews={productDetail?.seller.seller.numReviews}
+              />
+            </div>
+          </div>
         </div>
         <div
           className={`description-container`}
@@ -116,7 +195,15 @@ export default function ProductInfo(props) {
           <div className={`label-tab ${activeTab == 5 ? "active" : ""}`}>
             <h2>Mais produtos</h2>
           </div>
-          <div className="body-container">asdf4</div>
+          <div className="body-container">
+            <div className="more-products-container">
+              {productOffer?.map((prodOffer) => (
+                <div className="more-product-box">
+                  <ProductTile product={prodOffer} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </>
