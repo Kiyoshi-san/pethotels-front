@@ -1,12 +1,11 @@
 import { applyMiddleware, createStore, compose, combineReducers } from "redux";
 import thunk from "redux-thunk";
-import { userListReducer } from "../reducers/user";
+import { userListReducer, loginModalReducer } from "../reducers/user";
 import {
   productDetailReducer,
   productListReducer,
   productOffersReducer,
 } from "../reducers/product";
-import { orderListReducer } from "../reducers/order";
 import { categoriesListReducer } from "../reducers/category";
 import { addProductToCartReducer } from "../reducers/cart";
 
@@ -14,6 +13,7 @@ const initialState = {
   loading: false,
   data: [],
   error: false,
+  loginModalActive: "",
 };
 
 const reducer = combineReducers({
@@ -23,6 +23,7 @@ const reducer = combineReducers({
   categoriesList: categoriesListReducer,
   productDetail: productDetailReducer,
   addProductToCart: addProductToCartReducer,
+  loginModal: loginModalReducer,
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose;

@@ -50,6 +50,8 @@ body {
 .click-underline-container {
     @media(min-width: map-get($breakpoints, medium)) {
         position: relative;
+        margin: 0 rem-calc(20);
+        cursor: pointer;
         .underline {
             position: absolute;
             width: 100%;

@@ -1,9 +1,17 @@
 import React from "react";
-import Search from "../Search";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import MenuCategory from "../Menu/MenuCategory";
+import { activeLoginModal } from "../../redux/actions/user";
 
 export default function Header() {
+  const dispatch = useDispatch();
+  const handleLoginModal = () => {
+    dispatch(activeLoginModal(true, "Login"));
+  };
+  const handleHotelModal = () => {
+    dispatch(activeLoginModal(true, "Hotel"));
+  };
+
   return (
     <div className="top-header-menu-container">
       <div className="top-header-menu-box">
@@ -12,19 +20,19 @@ export default function Header() {
             <i className="icon icon-logo"></i>
           </Link>
         </div>
-        <Search />
         <div className="cta-icons">
-          <i className="icon icon-heart-empty hide-for-small-only"></i>
-          <div className="top-header-menu--my-account">
-            <div className="title">
+          <div className="category-item click-underline-container">
+            <div className="title" onClick={handleLoginModal}>
               <span className="hide-for-small-only">Minha conta</span>
               <i className="icon icon-profile show-for-small-only"></i>
             </div>
+            <div className="underline"></div>
           </div>
-          <i className="icon icon-cart"></i>
+          <div className="menu-hotel-container" onClick={handleHotelModal}>
+            <span>Sou um Hotel</span>
+          </div>
         </div>
       </div>
-      <MenuCategory />
     </div>
   );
 }

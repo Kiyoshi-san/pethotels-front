@@ -1,9 +1,11 @@
 .top-header-menu-container {
+    display: flex;
     position: relative;
     width: 100%;
     z-index: 3;
     .top-header-menu-box {
         display: flex;
+        justify-content: space-around;
         width: 100%;
         align-items: center;
         background: map-get(map-get($foundation-palette, primary), sixth);
@@ -52,16 +54,6 @@
                 }
             }
             .top-header-menu--my-account {
-                &:before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: map-get(map-get($foundation-palette, primary), first);
-                    opacity: 0.6;
-                }
                 position: relative;
                 display: flex;
                 height: rem-calc(90);
@@ -82,9 +74,37 @@
             }
         }
     }
+    .menu-hotel-container {
+        &:before {
+            content: '';
+            background-color: map-get(map-get($foundation-palette, primary), first);
+            opacity: 0.8;
+            height: 100%;
+            width: 100%;
+            border: solid;
+            position: absolute;
+            border: none;
+            border-radius: rem-calc(35);
+        }
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        padding: rem-calc(20);
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+            &:before {
+                opacity: 1;
+            }
+        }
+        span {
+            z-index: 1;
+        }
+    }
 }
 
-// MOBILE
+// DESKTOP
 @media(min-width: map-get($breakpoints, medium)) {
     .top-header-menu-container {
         .top-header-menu-box {
