@@ -15,10 +15,9 @@
                     a {
                         color: map-get(map-get($foundation-palette, secondary), sixth);
                         margin: 0 rem-calc(10);
-                        filter: brightness(1);
                         transition: all 0.3s;
                         &:hover {
-                            filter: brightness(0);
+                            color: map-get(map-get($foundation-palette, primary), first);
                         }
                     }
                 }
