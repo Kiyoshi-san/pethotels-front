@@ -1,0 +1,28 @@
+.modal-container {
+    .modal-box {
+        .user-login-container {
+            .title {
+                text-align: center;
+                h2 {
+                    @include Poppins(800);
+                    color: map-get(map-get($foundation-palette, primary), fifth);                    
+                }
+            }
+            form {
+                .cta-container {
+                    text-align: center;
+                    margin: rem-calc(20) 0;
+                    a {
+                        color: map-get(map-get($foundation-palette, secondary), sixth);
+                        margin: 0 rem-calc(10);
+                        filter: brightness(1);
+                        transition: all 0.3s;
+                        &:hover {
+                            filter: brightness(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

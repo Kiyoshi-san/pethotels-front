@@ -11,7 +11,11 @@ export default function Modal(props) {
   };
 
   return (
-    <div className={`modal-container ${className}`} onClick={handleShade}>
+    <div className="modal-container">
+      <div
+        className={`modal-container-box ${className}`}
+        onClick={handleShade}
+      />
       <div className="modal-box">
         <Component />
       </div>

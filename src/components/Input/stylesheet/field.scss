@@ -1,0 +1,15 @@
+.field-container {
+    display: flex;
+    border: solid rem-calc(2) map-get(map-get($foundation-palette, secondary), fifth);
+    padding: rem-calc(10);
+    border-radius: rem-calc(4);
+    margin: rem-calc(20);
+    .field-box {
+        width: 100%;
+        input {
+            border: none;
+            outline: none;
+            width: 100%;
+        }
+    }
+}
